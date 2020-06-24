@@ -3,5 +3,5 @@
  
 **/.ipynb_checkpoints
 
-*.csv 
-*.dta 
+/*.csv 
+/*.dta 
