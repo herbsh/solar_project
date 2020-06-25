@@ -2,5 +2,7 @@
 !.gitignore
  
 **/.ipynb_checkpoints
+**/0_data/TTS_v2018.dta
+
 
  
