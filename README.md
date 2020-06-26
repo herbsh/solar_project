@@ -1,13 +1,13 @@
 
+# Raw Data 
+
+Descriptions of Raw Data sets
+
 # Data Pipeline Master Document
 
 - A summary of all steps and related notebooks that were used in creating data and analysis for the solar project   
 - Notebooks are sequentially dependent 
 - Update: June 24, 2020 
-
-## Raw Data 
-
-Descriptions of Raw Data sets
 
 ## Clustering 
 
@@ -21,6 +21,7 @@ Descriptions of Raw Data sets
   
 
 ### TODO: figure out if we used the two-step clustering in the final data, and refactor that part 
+ - we used the es_labeled90_100_2two_step.csv 
 
 ## Feature derived from ES - Installer Level 
 
@@ -48,6 +49,67 @@ Descriptions of Raw Data sets
     - from pipeline: /2_pipeline/closerate_withratingcounts_sent_score.csv" 
 - output: 
     - to pipeline: /2_pipeline/es_monthly_ind.dta" 
+
+## Feature from ES - Market Level 
+
+- note: this will be depended on clustering step outcome 
+- notebook : step3_es_feature_mktlevel.ipynb 
+- input: 
+    - market clustering labels: ./2_pipeline/es_labeled90_100_2two_step.csv' 
+    - additional coordinates: '../0_data/dec14_total_df.csv' 
+    - installer monthly :   '../2_pipeline/es_monthly_ind.dta' 
+    - original reviews : /0_data/Lock_ES_RawData/installer_review_data_20180410.csv' 
+
+- output: 
+    -  '../2_pipeline/es_marketlevel'+parameters+'.csv')
+
+## Feature from ES from webscraping 
+- notebook: step4_addwebscrape_es_panel.ipynb
+- input: 
+    - building on output from step3 : '../2_pipeline/es_marketlevel'+parameters+'.csv')
+    - add data obtained from webscraping EnergySage website '../0_data/es_web.csv' 
+- output: 
+    - '../2_pipeline/es_panel_step4'+parameters+'.csv'
+
+## Features from TTS (Tracking The Sun) - Market Level 
+- notebook: step5_tts_feature_mkt_level.ipynb 
+- input: 
+    - clustering result:  '../2_pipeline/es_labeled90_100_2two_step.csv'
+    - zip code and coordinates data: "../0_data/RawData_geospatial//uszip_latlong.dta" 
+- output 
+    - intermediary: market condition data - '../2_pipeline/marketconditions'+parameter+'.csv'
+    - market-month level data with zipcode_total_rev(revenue) '../2_pipeline/tts_mktcondidtions'+parameters+'.csv'
+
+
+## Add Price info from matching TTS with ES installers 
+- notebook: step6_tts_priceinfo.ipynb
+- input: 
+    - matching table that matches TTS with ES '../0_data/es_tts_matchingtable.xlsx' 
+    - price : '../0_data/TTS_v2018.dta' 
+    -  es panel data from step 4 
+    - es_marketlevel data from step 3 
+- output: 
+    - Installer-month level own price and others' price on the market:   2_pipeline/'price_for_es_from_'+parameters+'.csv'
+
+## Combine ES and TTS Market Level 
+- notebook: step7_combine_es_tts_mktlevel_indlevel.ipynb
+- input: 
+    - from step 5: tts_mkt_condition=pd.read_csv('../2_pipeline/tts_mktcondidtions'+parameters+'.csv')
+    - from step 6: tts_priceinfo=pd.read_csv('../2_pipeline/price_for_es_from_'+parameters+'.csv')
+    - from step 4: es_panel=pd.read_csv('../2_pipeline/es_panel_step4'+parameters+'.csv')
+- output:
+    - '../2_pipeline/panel_step7'+parameters+'.csv'
+
+
+## Processing and cleaning the individual level data 
+- notebook: step8_clean_data_ind.ipynb
+- input: "../2_pipeline/panel_step790_100_2two_step.csv"
+- output: "../2_pipeline/final_step_analysis_ind_jan17.dta"
+
+## Use BERT to Vectorize reviews Texts 
+- notebook: step9_use_bert_vectorize.ipynb
+- input: raw reviews texts '../0_data/Lock_ES_RawData/installer_review_data_20180410.csv'
+- output: '../3_output/ALL_BERT_distances_pairwise_dec30.csv' 
 
 
 ```python
