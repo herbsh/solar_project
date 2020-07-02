@@ -1,0 +1,37 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+ & (1) & (2) & (3) \\ \midrule
+ & F.Activity & F.Activity & F.Activity \\
+Entropy & 4.189** & 4.290** &  \\
+ & (0.003) & (0.004) &  \\
+Entropy$^2$ & -4.066* & -4.147* &  \\
+ & (0.020) & (0.018) &  \\
+Text-based Entropy &  &  & 20.57 \\
+ &  &  & (0.348) \\
+Text-based Entropy$^2$ &  &  & -61.58 \\
+ &  &  & (0.332) \\
+Rating Avg & -0.218 &  &  \\
+ & (0.695) &  &  \\
+Sentiment Score &  & -0.217 & 0.349 \\
+ &  & (0.651) & (0.601) \\
+Mkt Revenue & -0.282** & -0.288** & -0.379** \\
+ & (0.008) & (0.004) & (0.005) \\
+Experience(Avg) & 0.0559* & 0.0573* & 0.0740** \\
+ & (0.017) & (0.013) & (0.002) \\
+Price Diff(Avg) & 0.0970 & -0.00130 & -0.000982 \\
+ & (0.832) & (0.998) & (0.998) \\
+Constant & 6.594* & 5.596*** & 3.642 \\
+ & (0.019) & (0.000) & (0.053) \\
+State Dummies  & Yes        & Yes        & Yes        \\
+Fixed Effects  & Yes        & Yes        & Yes        \\
+Observations & 746 & 767 & 961 \\
+p-values in parentheses &  &  &  \\
+="* p\textless{}0.05 & ** p\textless{}0.01 & *** p\textless{}0.001" &  \\ \bottomrule
+\end{tabular}
+\caption{Market Level Use Given Quotes( instead of winning quotes) }
+\label{reg_mkt_alt_measure}
+\end{table}

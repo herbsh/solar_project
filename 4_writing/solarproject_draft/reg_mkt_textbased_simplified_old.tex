@@ -1,0 +1,36 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+                                      & (1)                 & (2)           \\ \midrule
+                                      & F.Transaction       & F.Transaction \\
+Text-based Entropy                    & 7.394               & 5.963         \\
+                                      & (0.108)             & (0.166)       \\
+Text-based Entropy\textasciicircum{}2 & -19.33+             & -16.31        \\
+                                      & (0.069)             & (0.104)       \\
+Rating Avg                            & -0.262              &               \\
+                                      & (0.214)             &               \\
+Sentiment Score                       &                     & -1.322*       \\
+                                      &                     & (0.021)       \\
+Mkt Revenue                           & -0.0458             & -0.0296       \\
+                                      & (0.289)             & (0.485)       \\
+Experience(Avg)                       & 0.0127+             & 0.00856       \\
+                                      & (0.098)             & (0.249)       \\
+Price Diff(Avg)                       & 0.0877              & 0.127         \\
+                                      & (0.794)             & (0.703)       \\
+Constant                              & 2.900*              & 2.573*        \\
+                                      & (0.006)             & (0.000)       \\
+Fixed Effect                          & Yes                 & Yes           \\
+State Dummies                         & Yes                 & Yes           \\
+Observations                          & 611                 & 611           \\
+r2                                    & 0.158               & 0.170         \\
+aic                                   & 988.3               & 979.8         \\
+bic                                   & 1028.0              & 1019.5        \\
+p-values in parentheses               &                     &               \\
+="+ p\textless{}0.10                  & * p\textless{}0.05" &               \\ \bottomrule
+\end{tabular}
+\caption{Market Level Analysis with Variables Derived from Text Analysis}
+\label{reg_mkt_textbased_simplified}
+\end{table}

@@ -1,0 +1,59 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\begin{threeparttable}[t]
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+                            & (I)         & (II)        & (III)       & (IV)        \\
+                            & Installer's & Installer's & Installer's & Installer's \\
+Variables                   & Activity Level & Activity Level & Activity Level & Activity Level \\ \midrule
+Text-based\_Entropy\_Self   & 5.326***    & 5.389***    & 5.014***    & 4.890***    \\
+                            & (0.000)     & (0.000)     & (0.000)     & (0.000)     \\
+Text-based\_Entropy\_Self$^2$    & -23.71***           & -23.54***              & -20.29***      & -20.40***      \\
+                            & (0.000)     & (0.000)     & (0.000)     & (0.000)     \\
+Text-based\_Entropy\_Others & -1.288      & -0.989      & -1.640      & -1.955      \\
+                            & (0.389)     & (0.509)     & (0.275)     & (0.193)     \\
+Text-based\_Entropy\_Others$^2$   & -9.593              & -13.13                 & 1.348          & 5.132          \\
+                            & (0.623)     & (0.517)     & (0.944)     & (0.782)     \\
+Average\_Rating\_Self       & -0.942***   &             &             & -0.998***   \\
+                            & (0.000)     &             &             & (0.000)     \\
+Average\_Rating\_Others     & 0.000219    &             &             & -0.00483    \\
+                            & (0.991)     &             &             & (0.813)     \\
+Average\_Sentiment\_Self    &             & -0.431      & -0.404      &             \\
+                            &             & (0.090)     & (0.129)     &             \\
+Average\_Sentiment\_Others  &             & 0.111       & 0.0806      &             \\
+                            &             & (0.378)     & (0.524)     &             \\
+Rating\_Entropy\_Self       &             &             & 2.044***    & 2.161***    \\
+                            &             &             & (0.000)     & (0.000)     \\
+Rating\_Entropy\_Self$^2$              &                     &                        & -4.246***      & -4.344***      \\
+                            &             &             & (0.000)     & (0.000)     \\
+Rating\_Entropy\_Others     &             &             & 0.399*      & 0.384*      \\
+                            &             &             & (0.033)     & (0.045)     \\
+Rating\_Entropy\_Others$^2$          &                     &                        & -2.382***      & -2.376***      \\
+                            &             &             & (0.000)     & (0.000)     \\
+Review\_Count               & 0.0489***   & 0.0492***   & 0.0420***   & 0.0413***   \\
+                            & (0.000)     & (0.000)     & (0.000)     & (0.000)     \\
+Experience                  & 0.178***    & 0.175***    & 0.176***    & 0.177***    \\
+                            & (0.001)     & (0.001)     & (0.001)     & (0.001)     \\
+Price\_Difference           & 0.0952      & 0.101       & 0.125       & 0.118       \\
+                            & (0.278)     & (0.247)     & (0.158)     & (0.181)     \\
+Market\_LogRevenue          & -0.0164***  & -0.0165***  & -0.0159***  & -0.0158***  \\
+                            & (0.000)     & (0.000)     & (0.001)     & (0.001)     \\
+Constant                    & 2.374***    & 2.075***    & 2.379***    & 2.649***    \\
+                            & (0.000)     & (0.000)     & (0.000)     & (0.000)     \\
+Fixed Effect                & Yes        & Yes         & Yes          &Yes \\
+State Dummies               & Yes        & Yes        & Yes           &Yes\\                          
+Observations                & 4562        & 4562        & 4562        & 4562        \\
+Adjusted-R$^2$                          & 0.633       & 0.633       & 0.638       & 0.638       \\
+AIC                         & 13202.7     & 13200.9     & 13147.9     & 13147.6     \\
+BIC                         & 13292.7     & 13290.8     & 13263.5     & 13263.2     \\ \bottomrule
+\end{tabular}%
+\begin{tablenotes}
+\item Note: $p$-value in parentheses; $^\star p<0.05;^{\star\star} p<0.01;^{\star\star\star} p<0.001$
+\end{tablenotes}
+\end{threeparttable}
+\caption{Installer Level Analysis with Variables Derived from Text Analysis}
+\label{reg_ind_withtext}
+\end{table} 

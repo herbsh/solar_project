@@ -1,0 +1,20 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lllllllll@{}}
+\toprule
+Variables                     & (1)    & (2)    & (3)    & (4)    & (5)    & (6)    & (7)   & (8) \\ \midrule
+(1) Average\_Sentiment\_Self  & 1      &        &        &        &        &        &       &     \\
+(2) Average\_Rating\_Self     & 0.832  & 1      &        &        &        &        &       &     \\
+(3) Average\_Sentiment\_Other & -0.036 & -0.074 & 1      &        &        &        &       &     \\
+(4) Average\_Rating\_Other    & -0.073 & -0.023 & 0.434  & 1      &        &        &       &     \\
+(5) Text\_Dispersion\_Other   & -0.064 & 0.005  & -0.032 & -0.076 & 1      &        &       &     \\
+(6) Rating\_Entropy\_Other    & 0.122  & 0.07   & -0.089 & -0.527 & 0.081  & 1      &       &     \\
+(7) Text\_Dispersion\_Self    & 0.1    & 0.136  & -0.089 & -0.003 & -0.091 & 0.009  & 1     &     \\
+(8) Rating\_Entropy\_Self     & -0.081 & -0.086 & 0.064  & 0.023  & 0.026  & -0.089 & 0.304 & 1   \\ \bottomrule
+\end{tabular}%
+\caption{Correlation of Ratings and Text-based Measures (Installer-level) }
+\label{corr_measures_dispersion_text_and_rating}
+\end{table} 

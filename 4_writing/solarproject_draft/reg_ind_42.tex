@@ -1,0 +1,37 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lll@{}}
+\toprule
+ & (1) & (2) \\ \midrule
+ & F.Activity & F.Activity \\
+Text-based Entropy Others & 31.75* & 4.758 \\
+ & 0 & -0.675 \\
+Text-based Entropy Others $^2$ & -103.5* & -18.55 \\
+ & 0 & -0.644 \\
+Text-based Entropy (self) &  & 13.16 \\
+ &  & -0.284 \\
+Text-based Entropy (self)$^2$ &  & -37.23 \\
+ &  & -0.246 \\
+Avg Sentiment Score & -0.825* & -1.082+ \\
+ & -0.027 & -0.05 \\
+Avg Sent(Others) & -0.199 & -0.221 \\
+ & -0.445 & -0.404 \\
+Reviews Count & 0.0484* & 0.0483* \\
+ & 0 & 0 \\
+Experience & 0.236* & 0.0946 \\
+ & -0.002 & -0.282 \\
+Price Diff & -0.0598 & 0.0299 \\
+ & -0.38 & -0.884 \\
+Market Revenue & -0.0163* & -0.0159+ \\
+ & -0.012 & -0.073 \\
+Constant & 0.166 & 1.367 \\
+ & -0.776 & -0.404 \\
+Observations & 6210 & 3479 \\
+p-values in parentheses &  &  \\
+="+ p\textless{}0.10 & * p\textless{}0.05" &  \\ \bottomrule
+\end{tabular}
+\caption{Robustness Individual with Text-based Dispersion from Mean Distance}
+\label{reg_ind_42}
+\end{table}

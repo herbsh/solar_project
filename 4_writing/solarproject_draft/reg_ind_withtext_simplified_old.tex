@@ -1,0 +1,46 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+                                                       & (1)                 & (2)        & (3)        & (4)        \\ \midrule
+                                                       & F.Activity          & F.Activity & F.Activity & F.Activity \\
+Text-based Dispersion Others                              & 12.21               & 7.098      & 9.192      & 4.304      \\
+                                                       & (0.235)             & (0.502)    & (0.326)    & (0.656)    \\
+Text-based Dispersion Others$^2$ & -51.59+             & -30.95     & -40.07     & -20.20     \\
+                                                       & (0.091)             & (0.346)    & (0.150)    & (0.506)    \\
+Text-based Dispersion(self)                               &                     &            & 7.060*     & 7.023*     \\
+                                                       &                     &            & (0.002)    & (0.003)    \\
+Text-based Dispersion(self)$^2$  &                     &            & -21.40*    & -19.92*    \\
+                                                       &                     &            & (0.006)    & (0.009)    \\
+Avg                                                    & -0.663              &            & -1.067+    &            \\
+                                                       & (0.290)             &            & (0.077)    &            \\
+Avg Sentiment Score                                    &                     & -1.303*    &            & -1.381*    \\
+                                                       &                     & (0.012)    &            & (0.011)    \\
+Avg(Others)                                            & -0.0341             &            & -0.0170    &            \\
+                                                       & (0.825)             &            & (0.914)    &            \\
+Avg Sent(Others)                                       &                     & -0.221     &            & -0.167     \\
+                                                       &                     & (0.387)    &            & (0.504)    \\
+Reviews Count                                          & 0.0464*             & 0.0479*    & 0.0428*    & 0.0450*    \\
+                                                       & (0.000)             & (0.000)    & (0.000)    & (0.000)    \\
+Experience                                             & 0.238*              & 0.221*     & 0.207*     & 0.190*     \\
+                                                       & (0.017)             & (0.016)    & (0.030)    & (0.029)    \\
+Price Diff                                             & 0.0549              & 0.0592     & 0.0931     & 0.100      \\
+                                                       & (0.702)             & (0.671)    & (0.514)    & (0.471)    \\
+Market Revenue                                         & -0.0172*            & -0.0179*   & -0.0165*   & -0.0171*   \\
+                                                       & (0.021)             & (0.015)    & (0.023)    & (0.017)    \\
+Constant                                               & 3.546*              & 2.329*     & 3.750*     & 1.960*     \\
+                                                       & (0.012)             & (0.009)    & (0.006)    & (0.022)    \\
+Fixed Effect                                           & Yes                 & Yes        & Yes        & Yes        \\
+State Dummies                                          & Yes                 & Yes        & Yes        & Yes        \\
+Observations                                           & 4109                & 4192       & 4109       & 4192       \\
+r2                                                     & 0.142              & 0.152    & 0.154     & 0.164     \\
+aic                                                    & 11914.5             & 12131.8    & 11878.2    & 12092.8    \\
+bic                                                    & 11984.0             & 12201.5    & 11960.4    & 12175.2    \\
+p-values in parentheses                                &                     &            &            &            \\
+="+ p\textless{}0.10                                   & * p\textless{}0.05" &            &            &            \\ \bottomrule
+\end{tabular}
+\caption{Individual Analysis with Variables Derived from Text Analysis}
+\label{reg_ind_withtext_simplified}
+\end{table}

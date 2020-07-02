@@ -1,0 +1,37 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lccc@{}}
+\toprule
+                                   & (1)        & (2)        & (3)        \\ \midrule
+                                   & F.Activity & F.Activity & F.Activity \\
+Entropy Others                     &            & 0.743+     & 0.705+     \\
+                                   &            & (0.057)    & (0.070)    \\
+Entropy(Others)$^2$ 			   &            & -1.302*    & -1.254*    \\
+                                   &            & (0.039)    & (0.041)    \\
+Entropy(Self)                      &            &            & 1.327*     \\
+                                   &            &            & (0.004)    \\
+Entropy(Self)$^2$                  &            &            & -1.695*    \\
+                                   &            &            & (0.031)    \\
+Activity                           & 0.529*     & 0.505*     & 0.504*     \\
+                                   & (0.000)    & (0.000)    & (0.000)    \\
+L.Activity                         & 0.0624*    & 0.0377     & 0.0354     \\
+                                   & (0.004)    & (0.153)    & (0.180)    \\
+Avg                                & -0.00942   & -0.0701*   & -0.0686*   \\
+                                   & (0.591)    & (0.000)    & (0.000)    \\
+Reviews Count                      & 0.0256*    & 0.0179*    & 0.0117*    \\
+                                   & (0.001)    & (0.006)    & (0.047)    \\
+Avg(Others)                        & -0.199+    & -0.200     & -0.167     \\
+                                   & (0.077)    & (0.111)    & (0.167)    \\
+Experience                         & -0.0230    & -0.0454    & -0.0548    \\
+                                   & (0.680)    & (0.415)    & (0.309)    \\
+Price Diff                         & -0.0329    & 0.115      & 0.114      \\
+                                   & (0.742)    & (0.291)    & (0.299)    \\
+Market Revenue                     & 0.00685    & 0.00337    & 0.00376    \\
+                                   & (0.240)    & (0.618)    & (0.581)    \\
+State Dummies                      & Yes        & Yes        & Yes        \\ \bottomrule
+\end{tabular}
+\caption{Robustness Check: Individual Level with Dynamic Panel}
+\label{rob_ind_dynamic}
+\end{table}

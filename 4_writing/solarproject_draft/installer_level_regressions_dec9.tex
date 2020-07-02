@@ -1,0 +1,50 @@
+{
+\def\sym#1{\ifmmode^{#1}\else\(^{#1}\)\fi}
+\begin{tabular}{l*{4}{c}}
+\hline\hline
+                    &\multicolumn{1}{c}{(1)}&\multicolumn{1}{c}{(2)}&\multicolumn{1}{c}{(3)}&\multicolumn{1}{c}{(4)}\\
+                    &\multicolumn{1}{c}{F.Activity}&\multicolumn{1}{c}{F.Activity}&\multicolumn{1}{c}{F.Activity}&\multicolumn{1}{c}{F.Activity}\\
+\hline
+Avg                 &      -0.873       &      -0.873       &      -0.873       &      -0.873       \\
+                    &     (0.141)       &     (0.149)       &     (0.141)       &     (0.149)       \\
+[1em]
+Avg $\times$ Avg    &      0.0920       &      0.0920       &      0.0920       &      0.0920       \\
+                    &     (0.301)       &     (0.293)       &     (0.301)       &     (0.293)       \\
+[1em]
+Reviews Count       &      0.0439\sym{*}&      0.0439\sym{*}&      0.0439\sym{*}&      0.0439\sym{*}\\
+                    &     (0.000)       &     (0.000)       &     (0.000)       &     (0.000)       \\
+[1em]
+Avg(Others)         &     -0.0411       &     -0.0411       &     -0.0411       &     -0.0411       \\
+                    &     (0.837)       &     (0.821)       &     (0.837)       &     (0.821)       \\
+[1em]
+Entropy Own Reviews &       2.440\sym{*}&       2.440\sym{*}&       2.440\sym{*}&       2.440\sym{*}\\
+                    &     (0.001)       &     (0.004)       &     (0.001)       &     (0.004)       \\
+[1em]
+Entropy Others Reviews&       1.913\sym{*}&       1.913\sym{*}&       1.913\sym{*}&       1.913\sym{*}\\
+                    &     (0.006)       &     (0.002)       &     (0.006)       &     (0.002)       \\
+[1em]
+Experience          &       0.188\sym{*}&       0.188\sym{*}&       0.188\sym{*}&       0.188\sym{*}\\
+                    &     (0.005)       &     (0.009)       &     (0.005)       &     (0.009)       \\
+[1em]
+Price Diff          &      0.0133       &      0.0133       &      0.0133       &      0.0133       \\
+                    &     (0.917)       &     (0.921)       &     (0.917)       &     (0.921)       \\
+[1em]
+Market Revenue      &     -0.0165\sym{+}&     -0.0165\sym{*}&     -0.0165\sym{+}&     -0.0165\sym{*}\\
+                    &     (0.091)       &     (0.020)       &     (0.091)       &     (0.020)       \\
+[1em]
+Entropy Others Reviews $\times$ Entropy Others Reviews&      -2.758\sym{*}&      -2.758\sym{*}&      -2.758\sym{*}&      -2.758\sym{*}\\
+                    &     (0.000)       &     (0.001)       &     (0.000)       &     (0.001)       \\
+[1em]
+Entropy Own Reviews $\times$ Entropy Own Reviews&      -2.904\sym{*}&      -2.904\sym{*}&      -2.904\sym{*}&      -2.904\sym{*}\\
+                    &     (0.012)       &     (0.017)       &     (0.012)       &     (0.017)       \\
+[1em]
+Constant            &       4.865\sym{*}&       4.865\sym{*}&       4.865\sym{*}&       4.865\sym{*}\\
+                    &     (0.001)       &     (0.001)       &     (0.001)       &     (0.001)       \\
+\hline
+Observations        &        4190       &        4190       &        4190       &        4190       \\
+\hline\hline
+\multicolumn{5}{l}{\footnotesize \textit{p}-values in parentheses}\\
+\multicolumn{5}{l}{\footnotesize Specification: std err cluster on market (model 1 and 3);installer level(2 and 4),fixed effect(1 and 2), re(3 and 4) }\\
+\multicolumn{5}{l}{\footnotesize \sym{+} \(p<0.10\), \sym{*} \(p<0.05\)}\\
+\end{tabular}
+}

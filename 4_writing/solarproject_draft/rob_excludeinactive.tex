@@ -1,0 +1,47 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+\begin{threeparttable}[t]
+\begin{tabular}{@{}lccc@{}}
+\toprule
+                                                     & (I)            & (II)           & (III)          \\ 
+                                                     & Installer's    & Installer's    & Installer's    \\
+Variables                                            & Activity Level & Activity Level & Activity Level \\ \midrule
+Rating\_Entropy\_Self                                &                &                & 1.428***       \\
+                                                     &                &                & (0.000)        \\
+Rating\_Entropy\_Self$^2$                            &                &                & -2.590***      \\
+                                                     &                &                & (0.000)        \\
+Rating\_Entropy\_Others                              &                & 0.386          & 0.358          \\
+                                                     &                & (0.085)        & (0.108)        \\
+Rating\_Entropy\_Others$^2$                          &                & -2.243***      & -2.312***      \\
+                                                     &                & (0.000)        & (0.000)        \\
+Average\_Rating\_Self                                & -0.551**       & -0.524*        & -0.489*        \\
+                                                     & (0.007)        & (0.011)        & (0.033)        \\
+Average\_Rating\_Others                              & 0.00733        & 0.000713       & 0.0000629      \\
+                                                     & (0.741)        & (0.977)        & (0.998)        \\
+Review\_Count                                        & 0.0504***      & 0.0479***      & 0.0436***      \\
+                                                     & (0.000)        & (0.000)        & (0.000)        \\
+Experience                                           & 0.136*         & 0.134*         & 0.133*         \\
+                                                     & (0.010)        & (0.012)        & (0.012)        \\
+Price\_Difference                                    & 0.188*         & 0.200*         & 0.208*         \\
+                                                     & (0.036)        & (0.027)        & (0.021)        \\
+Market\_LogRevenue                                   & -0.00645       & -0.00618       & -0.00553       \\
+                                                     & (0.148)        & (0.165)        & (0.216)        \\
+Constant                                             & 2.788***       & 2.868***       & 2.995***       \\
+                                                     & (0.000)        & (0.000)        & (0.000)        \\
+Fixed Effect                                         & Yes            & Yes            & Yes            \\
+State Dummies                                        & Yes            & Yes            & Yes            \\
+Observations                                         & 3472           & 3472           & 3472           \\
+Adjusted R$^2$                                          & 0.622          & 0.625          & 0.627          \\
+AIC                                                  & 9693.2         & 9670.1         & 9655.4         \\
+BIC                                                  & 9748.6         & 9737.7         & 9735.3         \\ \bottomrule
+\end{tabular}%
+\begin{tablenotes}
+\item Note: $p$-value in parentheses; $^\star p<0.05;^{\star\star} p<0.01;^{\star\star\star} p<0.001 $
+\end{tablenotes}
+\caption{Robustness Check Excluding Inactive Installers}
+\end{threeparttable}
+\label{rob_exclude_inactive}
+\end{table}

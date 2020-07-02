@@ -1,0 +1,51 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{threeparttable}
+\begin{tabular}{@{}lccc@{}}
+\toprule
+                  & (I)      & (II)    & (III)   \\
+& Installer's Activity & Installer's Activity & Installer's Activity \\
+Variables & Level    & Level   & Level   \\ \midrule
+Text\_Dispersion\_Self                                 &            & 11.42*     & 13.28*     \\
+                                                           &            & (0.032)    & (0.016)    \\
+Text\_Dispersion\_Self$^2$    &            & -34.86*    & -37.87*    \\
+                                                           &            & (0.019)    & (0.013)    \\
+Text\_Dispersion\_Other                                & 14.22      & 13.10      & 14.26      \\
+                                                           & (0.086)    & (0.113)    & (0.080)    \\
+Text\_Dispersion\_Other$^2$  & -59.45*    & -54.83     & -57.21*    \\
+                                                           & (0.035)    & (0.051)    & (0.039)    \\
+Average\_Rating\_Self                                             & -0.436     & -0.489     &            \\
+                                                           & (0.086)    & (0.062)    &            \\
+Average\_Rating\_Others                                    & -0.0164    & -0.0166    &            \\
+                                                           & (0.468)    & (0.466)    &            \\
+Average\_Sentiment\_Self                                   &            &            & 0.268      \\
+                                                           &            &            & (0.438)    \\
+Average\_Sentiment\_Others                                 &            &            & 0.0770     \\
+                                                           &            &            & (0.802)    \\
+Reviews\_Count                                              & 0.0472*    & 0.0450*    & 0.0466*    \\
+                                                           & (0.000)    & (0.000)    & (0.000)    \\
+Experience                                                 & 0.104      & 0.0946     & 0.100      \\
+                                                           & (0.124)    & (0.164)    & (0.144)    \\
+Price\_Differences                                         & -0.00831   & 0.0141     & 0.0249     \\
+                                                           & (0.936)    & (0.893)    & (0.814)    \\
+Market\_LogRevenue                                         & -0.0162*   & -0.0158*   & -0.0156*   \\
+                                                           & (0.002)    & (0.002)    & (0.002)    \\
+Constant                                                   & 1.507*     & 0.747      & 0.236      \\
+                                                           & (0.029)    & (0.348)    & (0.782)    \\
+State Dummies  & Yes        & Yes        & Yes        \\
+Fixed Effects  & Yes        & Yes        & Yes        \\
+Adjusted R$^2$                                             & 0.668      & 0.669      & 0.670      \\
+AIC                                                        & 8853.4     & 8849.3     & 8843.7     \\
+BIC                                                        & 8925.9     & 8933.9     & 8928.3     \\ \bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item Note: $p$-value in parentheses; $^\star p<0.05;^{\star\star} p<0.01;^{\star\star\star} p<0.001 $
+\item The text-based dispersion variables are derived by taking the mean, instead of median, of the pairwise cosine distances.
+\end{tablenotes}
+\end{threeparttable}
+\vspace{10pt}
+\caption{Robustness Check - Installer Level Analysis with Text-based Dispersion from Mean Cosine Distances}
+\label{reg_ind_rob_text_mean}
+\end{table} 

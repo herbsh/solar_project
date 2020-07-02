@@ -1,0 +1,16 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\begin{tabular}{@{}llllll@{}}
+\toprule
+ & Instal& Reviews Ct & Ratings & Ent(Mkt) & Mkt Rev \\ \midrule
+Installations(Mkt, log) & 1.000 &  &  &  &  \\
+Reviews(Mkt, Log) & 0.731 & 1.000 &  &  &  \\
+Average Reviews(Mkt) & -0.013 & -0.020 & 1.000 &  &  \\
+Entropy(Mkt) & 0.228 & 0.306 & -0.572 & 1.000 &  \\
+Mkt Rev(Log) & 0.345 & 0.228 & -0.032 & 0.158 & 1.000 \\ \bottomrule
+\end{tabular}
+\caption{Correlation Market Level}
+\label{corr_mkt}
+\end{table}

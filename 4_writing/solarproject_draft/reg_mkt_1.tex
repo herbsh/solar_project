@@ -1,0 +1,29 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\begin{tabular}{@{}lcc@{}}
+\toprule
+ & (1) & (2) \\ \midrule
+ & F.Transaction & F.Transaction \\
+Entropy & 1.892** & 3.772*** \\
+ & (0.004) & (0.000) \\
+Entropy$^2$ & -1.893* & -4.057*** \\
+ & (0.011) & (0.000) \\
+Rating Avg & -0.0518 & -0.0438 \\
+ & (0.824) & (0.853) \\
+Mkt Revenue & -0.119 & -0.0815* \\
+ & (0.053) & (0.031) \\
+Experience(Avg) & 0.0179 & -0.0359 \\
+ & (0.074) & (0.172) \\
+Price Diff(Avg) & 0.313 & 0.0482 \\
+ & (0.125) & (0.787) \\
+Constant & 1.902 & 0.264 \\
+ & (0.105) & (0.810) \\
+Observations & 746 & 746 \\
+p-values in parentheses &  &  \\
+="* p\textless{}0.05 & ** p\textless{}0.01 & *** p\textless{}0.001" \\ \bottomrule
+\end{tabular}
+\caption{Market Level Use Winning Quotes and Quantitative Dispersion Measures}
+\label{reg_mkt_1}
+\end{table}

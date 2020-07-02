@@ -1,0 +1,35 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}
+\centering
+\begin{tabular}{@{}lllllll@{}}
+\toprule
+ & (1) & (2) & (3) & (4) & (5) & (6) \\ \midrule
+ & F.Tran & F.Tran & F.Tran & F.Tran & F.Tran & F.Tran \\
+Entropy & 2.106* & 1.682* &  &  &  & 1.528* \\
+ & (0.003) & (0.001) &  &  &  & (0.001) \\
+Entropy \# Entropy & -2.163* & -1.893* &  &  &  & -1.729* \\
+ & (0.005) & (0.001) &  &  &  & (0.001) \\
+Market Revenue & -0.0500* & -0.0300 & -0.136* & -0.0802* & -0.0802* & -0.0161 \\
+ & (0.044) & (0.110) & (0.017) & (0.009) & (0.009) & (0.358) \\
+Market Revenue \# Market Revenue & 0.00184 & 0.00130 & 0.00714* & 0.00446* & 0.00446* & 0.000515 \\
+ & (0.179) & (0.213) & (0.029) & (0.013) & (0.013) & (0.607) \\
+L.Tran &  & 0.333* &  & 0.371* & 0.371* & 0.309* \\
+ &  & (0.000) &  & (0.000) & (0.000) & (0.000) \\
+Text Ent &  &  & 10.20 & 7.314 &  &  \\
+ &  &  & (0.241) & (0.154) &  &  \\
+Text Ent\textasciicircum{}2 &  &  & -33.23 & -22.99 &  &  \\
+ &  &  & (0.199) & (0.129) &  &  \\
+Text Ent(Normalized) &  &  &  &  & 0.0530 & 0.0274 \\
+ &  &  &  &  & (0.451) & (0.704) \\
+Text Ent(Normalized)\textasciicircum{}2 &  &  &  &  & -0.0377 & -0.0298+ \\
+ &  &  &  &  & (0.129) & (0.065) \\
+Constant & 1.509* & 0.669* & 1.177 & 0.464 & 1.027* & 0.709* \\
+ & (0.000) & (0.001) & (0.129) & (0.317) & (0.000) & (0.002) \\
+Observations & 754 & 745 & 961 & 952 & 952 & 707 \\
+p-values in parentheses &  &  &  &  &  &  \\
+="+ p\textless{}0.10 & * p\textless{}0.05" &  &  &  &  &  \\ \bottomrule
+\end{tabular}
+\caption{Regression on Market Level with Text-based Entropy}
+\label{reg_mkt_text_ent}
+\end{table}

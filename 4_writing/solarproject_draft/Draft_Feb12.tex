@@ -1,0 +1,639 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author template for Management Science (mnsc) for articles with e-companion (EC)
+%% Mirko Janc, Ph.D., INFORMS, mirko.janc@informs.org
+%% ver. 0.95, December 2010
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[mnsc,blindrev]{informs3} % current default for manuscript submission
+%\documentclass[mnsc,nonblindrev]{informs3}
+\documentclass[msom,blindrev]{informs3}
+\OneAndAHalfSpacedXI % current default line spacing
+%%\OneAndAHalfSpacedXII
+%%\DoubleSpacedXII
+%\DoubleSpacedXI
+
+% If hyperref is used, dvi-to-ps driver of choice must be declared as
+%   an additional option to the \documentstyle. For example
+%\documentclass[dvips,mnsc]{informs3}      % if dvips is used
+%\documentclass[dvipsone,mnsc]{informs3}   % if dvipsone is used, etc.
+
+% Private macros here (check that there is no clash with the style)
+\usepackage{graphicx}
+
+% Natbib setup for author-year style
+\usepackage{natbib}
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\newblock{\ }%
+ \def\BIBand{and}%
+
+\usepackage{booktabs}
+
+%\usepackage{csquotes}
+\usepackage[UKenglish,USenglish]{babel}
+%%package to comment a whole block
+\usepackage{verbatim}
+%% Setup of theorem styles. Outcomment only one.
+%% Preferred default is the first option.
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Lema 1.1, Theorem 1.2)
+\ECRepeatTheorems
+
+%% Setup of the equation numbering system. Outcomment only one.
+%% Preferred default is the first option.
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+
+% For new submissions, leave this number blank.
+% For revisions, input the manuscript number assigned by the on-line
+% system along with a suffix ".Rx" where x is the revision number.
+\MANUSCRIPTNO{}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+% Outcomment only when entries are known. Otherwise leave as is and
+%   default values will be used.
+%\setcounter{page}{1}
+%\VOLUME{00}%
+%\NO{0}%
+%\MONTH{Xxxxx}% (month or a similar seasonal id)
+%\YEAR{0000}% e.g., 2005
+%\FIRSTPAGE{000}%
+%\LASTPAGE{000}%
+%\SHORTYEAR{00}% shortened year (two-digit)
+%\ISSUE{0000} %
+%\LONGFIRSTPAGE{0001} %
+%\DOI{10.1287/xxxx.0000.0000}%
+
+% Author's names for the running heads
+% Sample depending on the number of authors;
+% \RUNAUTHOR{Jones}
+% \RUNAUTHOR{Jones and Wilson}
+% \RUNAUTHOR{Jones, Miller, and Wilson}
+% \RUNAUTHOR{Jones et al.} % for four or more authors
+% Enter authors following the given pattern:
+%\RUNAUTHOR{}
+
+% Title or shortened title suitable for running heads. Sample:
+% \RUNTITLE{Bundling Information Goods of Decreasing Value}
+% Enter the (shortened) title:
+\RUNTITLE{Customer Reviews in an Online Solar Marketplace}
+
+% Full title. Sample:
+% \TITLE{Bundling Information Goods of Decreasing Value}
+% Enter the full title:
+\TITLE{Customer Reviews in an Online Solar Marketplace}
+
+% Block of authors and their affiliations starts here:
+% NOTE: Authors with same affiliation, if the order of authors allows,
+%   should be entered in ONE field, separated by a comma.
+%   \EMAIL field can be repeated if more than one author
+\ARTICLEAUTHORS{%
+\AUTHOR{Snidely Slippery}
+\AFF{Department of Bread Spread Engineering, Dairy University, Cowtown, IL 60208, \EMAIL{slippery@dairy.edu}} %, \URL{}}
+\AUTHOR{Marg Arinella}
+\AFF{Institute for Food Adulteration, University of Food Plains, Food Plains, MN 55599, \EMAIL{m.arinella@adult.ufp.edu}}
+% Enter all authors
+} % end of the block
+
+\ABSTRACT{%
+This paper
+% Enter your abstract
+}%
+
+% Sample
+%\KEYWORDS{deterministic inventory theory; infinite linear programming duality;
+%  existence of optimal policies; semi-Markov decision process; cyclic schedule}
+
+% Fill in data. If unknown, outcomment the field
+\KEYWORDS{marketplace, reviews} \HISTORY{Update: November, 2019}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Samples of sectioning (and labeling) in MNSC
+% NOTE: (1) \section and \subsection do NOT end with a period
+%       (2) \subsubsection and lower need end punctuation
+%       (3) capitalization is as shown (title style).
+%
+%\section{Introduction.}\label{intro} %%1.
+%\subsection{Duality and the Classical EOQ Problem.}\label{class-EOQ} %% 1.1.
+%\subsection{Outline.}\label{outline1} %% 1.2.
+%\subsubsection{Cyclic Schedules for the General Deterministic SMDP.}
+%  \label{cyclic-schedules} %% 1.2.1
+%\section{Problem Description.}\label{problemdescription} %% 2.
+
+% Text of your paper here
+
+\section{Introduction}
+
+Solar energy is booming in the world. It is one of the fastest growing energy generation technology with a dazzling 34\% growth worldwide in 2017 \citep{iea2018snapshot}. An important driver of this growth is increasing solar panel installations by electricity end-users. More and more, electricity end-users have been generating their own power with solar panels, reducing their reliance on electric utility companies. This type of solar generation has skyrocketed in the last decade. For example, in the U.S., residential solar capacity increased by a factor of XY from 2012 to 2019 (US EIA XYZ). The annual residential solar panel installations are forecasted to grow 25\% per year \textbf{in upcoming years where??} \citep{weaver_2019,seia}; with an even larger surge in the U.S after the passing of California Solar mandate \citep{gtmsolar2018}.
+
+
+There is an increasing trend of installing rooftop panels through online marketplaces. Consumer interest doubled in 11 states between 2017 to 2018, according to an analysis of website traffic \citep{energysageintel19}.
+An online solar marketplace is an innovative business model that eases the rooftop solar panel adoption process for electricity end-users. It essentially serves as an intermediary which connects buyers and installers of panels, making the process more transparent \citep{dorsey2019access}.
+
+In building an online marketplace, online reviews are considered as an essential functionality. In the literature, there are studies that investigate how the average customer \emph{ratings} impact a single firm's sales. The consensus is that the average customer ratings can have significant impact on sales, especially for products and services that entail searching and experiencing attributes \citep{zimmermann2018decomposing}. In this paper, our primary goal is to empirically study the impact of \emph{dispersion} of customer reviews on the performance metric of the platform, which is a composite of \emph{many} firms. To the best of our knowledge, there is no prior work that has studied this topic.
+
+Customer ratings are generally measured on a five-point scale. In this paper, we consider customer \emph{reviews} that include both customer ratings and the review text made by verified buyers. Thus, our analysis employs recent text mining techniques as well as traditional statistical tools.
+
+
+Our paper is also related to papers that investigates the effect of ratings on a single firm's performance metrics. In that stream, there is no consensus about the ultimate impact of dispersion of ratings on the firm's performance metric. Studies have demonstrated positive impacts \citep{chintagunta2010effects,chevalier2006effect,dellarocas2007exploring}, insignificant impact \citep{duan2008online}, and negative impacts in some instances \citep{wang2015user}.
+
+In the literature, there are papers that show the positive impact of reviews on sales. There are also other papers that demonstrate  (AVERAGE LIT (Literature considered average effect)).\\
+
+
+
+
+Different from these papers, we took a perspective of the marketplace operator. The marketplace perspective is an important one, especially from the marketplace providers' perspectives. Many new businesses are running a marketplace business model, and have designed the customer ratings functionality an essential part of the platform experience (CITE SOMETHING). In our work, we use the total number of successful proposals on a relevant local market to gauge the health of the marketplace. Total number of success proposals as a performance metric is consistent with common business practices in the investment circle \citep{boris_2018,galston_2017} as it is tied to a marketplace business's valuation. \\
+
+Our objective is to understand the impact of review dispersion on the activity level of each participating supplier on the platform, which has not been studied before. Our study provides insights into the operation of a marketplace and ties reviews to
+
+
+----[OLD VERSION]
+
+Solar cells, also called photovoltaic cells, convert sunlight directly into electricity without carbon emissions. Today, electricity from solar cells has become competitive in many regions and photovoltaic systems are being deployed at large scales to help power the electric grid \citep{nrel.gov}.
+
+Solar energy is blooming in the US and the world. It is one of the fastest growing energy generating technology with a dazzling 34\% growth worldwide in 2017 \citep{iea2018snapshot}. Just 6\% of American household have already installed solar panels at home with another 46\% say they have given serious thought to adding solar panels at their home in the past year (CITE kennedy thigpen 2019).Solar PV capacity increased by an annual rate of 50\%  in decade and residential solar is forecasted to grow 25\% per year \citep{weaver_2019,seia}; with an even larger upside in the U.S after the passing of California Solar mandate \citep{gtmsolar2018}. \\
+Online marketplaces is an innovative business model that has shown to ease the rooftop solar panel adoption process. It serves as an intermediary which connects buyers and made the whole process more transparent \citep{dorsey2019access}. There is an increasing trend of installing rooftop panels through online market places. Consumer interest doubled in 11 states between 2017 to 2018, according to an analysis of website traffic \citep{energysageintel19}.  \\
+In building an online marketplace, online reviews is considered an essential functionality. Studies have shown that reviews have significant impact on customers'  decision making process, especially for products and services that entail searching and experiencing attributes \citep{zimmermann2018decomposing}.  \\
+In the literature, there are papers that show the positive impact of reviews on sales. There are also other papers that demonstrate  (AVERAGE LIT (Literature considered average effect)).\\
+In this paper, different from this literature, our primary goal is to study the impact of dispersion of ratings on the  performance metric of the platform, which is a composite of many firms. To the best of our knowledge, there is no prior work that has studied this.
+
+Our paper is also related to papers that investigates the effect of ratings on a single firm's performance metrics. In that stream, there is no consensus about the ultimate impact of dispersion of ratings on the firm's performance metric. Studies have demonstrated positive impacts \citep{chintagunta2010effects,chevalier2006effect,dellarocas2007exploring}, insignificant impact \citep{duan2008online}, and negative impacts in some instances \citep{wang2015user}.
+
+Different from these papers, we took a perspective of the marketplace operator. The marketplace perspective is an important one, especially from the marketplace providers' perspectives. Many new businesses are running a marketplace business model, and have designed the customer ratings functionality an essential part of the platform experience (CITE SOMETHING). In our work, we use the total number of successful proposals on a relevant local market to gauge the health of the marketplace. Total number of success proposals as a performance metric is consistent with common business practices in the investment circle \citep{boris_2018,galston_2017} as it is tied to a marketplace business's valuation. \\
+
+Our objective is to understand the impact of review dispersion on the activity level of each participating supplier on the platform, which has not been studied before. Our study provides insights into the operation of a marketplace and ties reviews to
+
+
+
+\section{How Reviews Dispersion Impacts Activity Intensity(Literature Review) }
+ In this section we describe several mechanisms by which reviews dispersion may impact installers activity intensity on a platform. \\
+ Previous studies have established the important of performance feedback on worker productivity. In a hospital setting \cite{song2017closing} found a positive impact from public performance feedback to low-performing physicians. In a restaurant setting, coworker performances influence waiters own `up-selling' behavior, a reflection of efforts, in an non-linear, inverse U-shape fashion. \\
+The concept of \textbf{ratings dispersion} has been explored in marketing literature. For example, \cite{luo2013impact} examined the brand ratings dispersion and its impact on firm values. In the economics literature, \cite{marinovic2015credibility} modeled the phenomenon of performance feedback signal with a noise in a principal-agent model and illustrated feedback noise has potential of inducing agents efforts. Overall, the impact of feedbacks dispersion is less explored in an operations setting. \\
+The impact of high ratings could be two-folded. On the one hand, high variations could be an indicator that the ratings scheme is functioning as it is designed - it rewards good installer and records the bad deeds of the bad ones. It could encourage installers to pursue more leads in order to get a chance to be evaluated.
+On the other hand, a high ratings variation could also be taken as a sign of picky customers on the market. Installers fear of establishing bad permanent reputation will be more cautious when getting into a market of potentially picky customers. \\
+In this study, we make use of the detailed installer level activities data. We explore not only the impact of ratings, but more importantly, the nuanced impact of the ratings dispersion and reviews variation.
+
+
+\section{Data and Setting}
+
+We analyze the interplay between customer reviews and firm activities (and outcomes) in an online marketplace for electricity end-users' solar panel installations. To do so, we collaborated with an online solar marketplace company, and obtained the full record of customer reviews and installer proposal activities on a monthly level from 2013 to 2018 in the marketplace. This data set is proprietary and it is the primary source of our analysis. We also complement the marketplace data with Tracking The Sun (TTS) data set from the Lawrence Berkeley National Laboratory. TTS is a comprehensive and publicly available data set on U.S. solar panel installations. Below, we provide details about our data and the setting of the online solar marketplace we study.
+
+
+%We use a compilation of proprietary and publicly available data about residential solar markets. The focus of the study is about the actions and outcomes of an online marketplace for residential solar installations. We obtained, via collaboration with the marketplace company, the full record of customer reviews and installer actions on a monthly level from 2013 to 2018. We complement the marketplace data with Tracking The Sun (TTS) data set from Lawrence Berkeley National Laboratory. TTS aggregates data from more than 60 state and utility incentive programs. The full TTS data set covers more than 80\% of the U.S. PV
+%market, making it the most comprehensive extant U.S. PV data set. It contains installation level information such as installer name, unit size and price which allow us to construct a big picture of solar installation activities that are happening on and off the marketplace.
+
+\subsection{Online Solar Marketplace}
+
+The solar marketplace (MKT) we study is an independent shopping website for electricity end-users (i.e., homeowners) who are interested in installing solar panels.  The marketplace \textbf{PLS FILL IN} operates in \textbf{XY} states of the U.S., and allows solar panel installers to maintain a profile, receive information on and connect with potential customers in their service areas.
+
+The marketplace operates as follows. First, each customer visits the marketplace website and enters her information, such as the location of her property. Each installer provides service in a particular region. If the customer's location falls into an installer's service area, the marketplace informs the installer about the customer's arrival along with her information. Next, every informed installer decides whether to make a proposal to the customer. After the customer observes installer proposals, there are two possible outcomes: Either the customer agrees to work with an installer, i.e., there is a successful \emph{match}, or the customer gives up the process, i.e., there is no matching. If the customer ends up working with the installer, she can leave a review that contains text and a rating ranging from 1 to 5 stars. The marketplace verifies customers who leave reviews. Hence, reviews are considered as authentic and not manipulated. Figure \ref{reviews_example} provides an example of how customer reviews are displayed on the marketplace.
+
+\textbf{IN THE BELOW FIGURE, PLEASE  1) CUT THE PART BELOW AND INCLUDING "Read more" 2) CUT THE PART ABOVE AND INCLUDING "Write a review" 3) SHADE THE COMPANY NAME}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.81\linewidth]{reviews_example.png}
+	\caption{A sample customer review on the marketplace.}
+	\label{reviews_example}
+\end{figure}
+
+Note that the key decision of each installer in the marketplace is whether to make a proposal for each potential customer.
+ In this context, we study how the dispersion of customer reviews impact the (i) \emph{intensity of installer activity}, which is measured by how many proposals an installer makes per month, and (ii) number of matches, which is an important performance metric for the marketplace.
+
+To answer these questions, we obtained rich panel data from the solar marketplace that contain all of its vetted installers across the U.S., installers' monthly activities and all customer reviews (text content and ratings) from the beginning of the marketplace,\textbf{MONTH INFO} 2013, up to April 2018. Specifically, in our data set, we have observations about 416 installers about their monthly activities, i.e., the number of proposals made and the number of proposals won by each installer in every month, and 3607 pieces of customer reviews each with a rating, text content, time stamp, and the installer name with which the review is associated. Features of this data set are summarized in Table \textbf{XYZ}. We also collected the location information of each installer from their profiles, as illustrated in Figure \ref{fig:nationalinstallers}.
+
+TABLE XYZ: INSERT A TABLE THAT INCLUDES FOLLOWING INFORMATION:
+\begin{itemize}
+\item Number of observations on installers' monthly activities:
+\item Number of installers
+\item Number of customer reviews
+\item Time span: 
+\end{itemize}
+
+
+\textbf{FOR MY REFERENCE:\\
+What is the total number of proposals in each year? \\
+Which state is number \#1 in terms of total wins/total proposals?\\
+Which state is worst in terms of total wins/total proposals?}
+
+\textbf{Q1) IF THEY OPERATE AT MULTIPLE LOCATIONS, DO THEY PROVIDE THAT INFO ON THEIR PROFILE? \\
+Q2) WHAT IS THE FORMAT OF THE LOCATION INFO - IS IT A DETAILED ONE WITH A ZIPCODE? PLEASE INCLUDE AN EXAMPLE FOR ME HERE. }
+
+\textbf{COULD YOU PLEASE PREPARE THESE TWO GRAPHS? 1) TOTAL NUMBER OF REVIEWS PER INSTALLER - MAX NUMBER OF REVIEW FOR AN INSTALLER AND HISTOGRAM? 2) NUMBER OF INSTALLERS IN EACH STATE FOR TOP 10 STATES}
+
+\textbf{QUESTIONS: 1) HOW MANY OF THE INSTALLERS DO NOT HAVE A REVIEW? 
+2) WHAT IS THE PERCENTAGE OF THOSE INSTALLERS IN THE LOCAL MARKET WIN AND SUBMITTED PROPOSALS? 
+3) WHAT DO YOU ASSUME ABOUT THEM IN THE EMPIRICAL ANALYSIS?}
+\begin{figure}
+	\centering
+	\includegraphics[width=1.1\linewidth]{national_installers.png}
+	\caption{Installers in our data set}
+	\label{fig:nationalinstallers}
+\end{figure}
+ 
+It is perhaps worth mentioning that based on our conversions with the online marketplace, the marketplace actively reaches out to solar installers to recruit them to join to platform and help them set up their profile. So, unlike starting a physical business, installers' fixed cost of entry to the marketplace is negligibly small (if not zero). This is indeed the case in many different platforms \citep{haddad2015consumer}. In light of this, in this study, we do not study the entry of installers to the marketplace. Rather, we focus on installers' activity levels after they establish their profiles on the marketplace.
+
+
+%Lastly, we don't observe quitting the platform the same way as physical store closes off. We simply observe inactive profiles. Thus we do not explicitly investigate the exit behavior. 
+
+
+
+
+
+\subsection{Defining Local Market}
+\label{defining_local_market}
+
+
+\textbf{QUESTIONS:\\
+1) IF AN INSTALLER OPERATES IN MULTIPLE STATES/LOCATIONS, HOW DO YOU ACCOUNT FOR THEM IN THE CLUSTERING?\\
+2) WHAT IS THE PERCENTAGE OF INSTALLERS THAT OPERATE AT MULTIPLE LOCATIONS AMONG ALL INSTALLERS IN THE PLATFORM?\\
+3) WHAT IS THE PERCENTAGE OF NUMBER OF PROPOSAL MADE BY INSTALLERS THAT OPERATE AT MULTIPLE LOCATIONS AMONG ALL PROPOSALS IN THE PLATFORM?
+}
+
+Solar installation is a combination of product and service. As part of service, installers typically visit the customer site multiple times. Thus, each installer operates only within a certain geographical area. This means that installers compete ``locally.'' That is, they only compete with installers that are relatively nearby. To capture this practical element, we identify what is called ``local markets'' within the marketplace so that only installers in the same local market compete with each other.
+
+To segment the marketplace into local markets, we divide installers into multiple \emph{clusters} and treat each cluster as a separate local market.  In doing so, we use the location of installers and the state-of-the-art advanced clustering algorithm called OPTICS (i.e., ordering points to identify the clustering structure). The OPTICS algorithm identifies density-based clusters in spatial data, and is considered to be an extension of various commonly-used advanced clustering algorithms, such as the DBSCAN algorithm. An important advantage of the OPTICS algorithm is that it does not require 
+
+
+is a location and density based clustering algorithm
+
+machine learning-based was developed to overcome weaknesses of other advanced clustering algorithms such DBSCAN and k-means clustering methods. Thus,
+
+a location and density based clustering algorithm(
+
+
+%%%%
+
+Thus, we want to create a distance and density based \textit{clustering} which reflect the local competition. We shall divide installers into multiple clusters and treat one cluster as one local market. \\
+We do not want to use state, county, or congressional district boarder because it is common for installers to cross these artificial lines to serve customers. Instead, we create local market geographic division with the following steps:
+\begin{enumerate}
+	\item For every MKT installer, we determine its location using the 5-digit zip code they listed. We use the representative coordinates of that Zipcode based on data provided by the US Census(https://www.census.gov/geo/maps-data/data/gazetteer.html).
+	\item  We run a location and density based clustering algorithm(OPTICS, more details below) to cluster the pool of installers' coordinates. We later refer to the clusters generated as "markets".  Ordering points to identify the clustering structure (OPTICS) is an algorithm for finding density-based clusters in spatial data \citep{ankerst1999optics} and has its application in machine learning to geography \citep{teimouri2016method}.
+	\item OPTICS is an unsupervised machine learning algorithm. In order to determine the optimal combination of parameters, we ran a grid search for its critical parameter inputs - radius - from 10 miles to 150 miles and used Calinski-Harabasz index as benchmark. We settled on the radius at 90 miles to be optimal and arrived at 36 clusters, each cluster contains X to X installers. We use this cluster to define our market boundary geographically. (PROVIDE A PICTURE TO ILLUSTRATE THE CALINSKI-HARABASZ CURVE VS PARAMETER , refer to figure \ref{optics_parameter_gridsearch} and Calinski-Harabasz criteria : \citep{calinski1974dendrite}.
+\end{enumerate}
+The figures \ref{fig:nationalinstallers} and \ref{fig:markets} illustrated the process of allocating geographically dispersed installers (first figure) into clusters, with the centroid of each cluster marked in the second figure representing local markets.
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{optics_parameter_gridsearch.png}
+	\caption{Clustering Parameters}
+	\label{optics_parameter_gridsearch}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1\linewidth]{markets.jpg}
+	\caption{Local Market Centroids}
+	\label{fig:markets}
+\end{figure}
+
+
+\section{Model and Measures}
+In this section we describe our empirical methods. First we introduce the key dependent variable - dispersion of the reviews. We constructed two sets of variables to measure the dispersion of the reviews with both the numeric rating and the reviews text. We first quantify the impact of dispersion with the activity intensity on an individual installer level; we then elevate our analysis to the platform level by connecting the impact of dispersion on local market level total transactions in relation to the dispersion in reviews.
+
+\subsection{Measure Reviews Dispersion}
+\label{subsection_measure_dispersion}
+We are first interested in measuring the dispersion in ratings, i.e, the quantitative information provided by the ratings. Customer leave a piece of reviews after their solar installation experience. The reviews is composed of a rating ( from 1 to 5 stars) and a piece of texts. We first discribe how we measure reviews dispersion from the quantitative ratings information. We also introduce an innovative word embedding model that measures reviews dispersion from the texts data.
+\subsubsection{Capture Dispersion in Numeric Ratings}
+We use the concept of entropy to capture dispersion in ratings and to construct the independent variable of interests to capture the dispersion of ratings. Entropy is a common measure in information theory (ADD ONE MORE sentence to explain). It can be applied to a collection of a set of discrete probabilistic outcomes, which is our case is the discrete number of ratings ( from 1 to 5) that each piece of reviews receive. \\
+The formula of computing entropy on a set of discrete values is:  \\
+\begin{equation}
+H(X)=-\sum P(X)log(1/P(x)))
+\end{equation}
+For example, we want to measure the ratings dispersion on a set of 5 reviews, they all got 4-stars (out of 5). Therefore, we will be applying the calculation on a set $\{4,4,4,4,4\}$. Following the formula, this set of reviews has an entropy of 0. Alternatively, if we have a set of reviews as $\{3,5,3,5,4\}$, the entropy of this set of reviews is 1.0549.  Although both have the same average rating (4), the second set of ratings are more informative with a higher dispersion, hence has a higher entropy measure. \\
+
+We apply the entropy calculation on the dataset. For every installer-month, we calculate the ratings entropy on three scopes: \\
+1. Entropy on own reviews, denote as $ENT_{self,i,t}$. This is calculated on the set of reviews that are associated with the focal installer $i$ up to month $t$.  \\
+2. Entropy on peer installers' reviews, up to that month, denote as $ENT_{others,i,t}$. This is calculated on the set of reviews that are associated with all the other installers on focal installer's local market, per market boundaries that were set following steps described in \ref{defining_local_market}.  \\
+We also calculate entropy on the local market level:\\
+3. Entropy of all reviews on a local market $m$, up to that month $t$, which we later denote as $ENT_{mkt,m,t}$. This is calculated on a market-month level data set with market defined in \ref{defining_local_market}. \\
+
+
+
+
+\subsection{Installer Level Analysis}
+We aim to find the connection between ratings dispersion on installer activity intensities. The available data were used to construct a panel data set where the unit of analysis is the the measure of activity intensities ($\log$ (proposals generated + 1)) of a particular installer at a specific local market during a month. We use a regression model with fixed effects and clustered the standard errors on the local market level ( individual level yield similar results). We describe our regression models next. \\
+Using the indexes $i$ for installer, $m$ for local market, and $t$ for month, the following regression equation is used to estimate the impact of ratings dispersion (own ratings dispersion: $Ent_{i,self,t}$ ; others ratings dispersion: $Ent_{i,others,t}$) on focal installer's activity intensities $ActInt_{i,m,t}$:
+\begin{equation}
+    ActInt_{i,m,t+1}=\beta_{0}+\beta_{11} Ent_{i,m,others,t}+\beta_{2}Ent_{i,m,others,t}^2+
+   Controls_{i,t}+\alpha_{i}+\epsilon_{i,m,t}
+   \label{model_ind_1}
+\end{equation}
+
+\begin{equation}
+    ActInt_{i,m,t+1}=\beta_{3}+\beta_{4} Ent_{i,self,t}+\beta_{5}Ent_{i,self,t}^2+
+   Controls_{it}+\alpha_{i}+\epsilon_{i,m,t}
+   \label{model_ind_2}
+\end{equation}
+
+\begin{equation}
+    ActInt_{im,t+1}=\beta_{6}+\beta_{7}Ent_{i,self,t}+\beta_{8}Ent_{i,self,t}^2+\beta_{9}Ent_{im,others}+\beta_{10}Ent_{im,self,t}^2+Controls_{it}+\alpha_{i}+\epsilon_{imt}
+   \label{model_ind_3}
+\end{equation}
+ The error term $\epsilon$ represents factors that affect installer activity intensity that are unobservables in the data. $\alpha_{i}$ represents the installer level fixed effects. $Controls_{it}$ are all other installer-level or market level control variables we include in order to capture factors that are irrelevant to reviews dispersion. We detail our selection of control variables next.
+\subsubsection{Control Variables}\hfill\\
+\textbf{State}: State dummies are included to account for state level policy effects. (ELABORATE)\\
+\textbf{Price}: Price is an important factor. Although we do not model installers' pricing strategy, we want to control for the impact of price on installers' activities. We decide to look at the price difference between the focal installer and the others. We use Tracking the Sun data to find the installers' prices via matching name and Zipcode. We also use the unit price: price per KW. Price per KW is a common way to assess the price level of a solar system, as the final price tag of the solar system will be dependent on the size. We then compute the variable $PriceDiff_{i,t}$ as the difference in unit price between installer and the average unit price of their competitors on the local market. \\
+\textbf{Average Ratings}: The average ratings of installer themselves $avg_{i,t}$ and the average ratings of their competitors $avg_{others,t}$ on the market. \\
+\textbf{Experience}: The number of years the installer has been installing solar systems. We obtain that information from installers' website. \\
+\textbf{Local Markets Condition}: Once the algorithm gave us the clusters that defines market divisions, we augment the data with Tracking The Sun data to capture local market conditions. We use the same Market definition from \ref{defining_local_market} and computed the sum of all solar installations within a market during a month, denote as $MarketRev_{mt}$. The market revenue variable measures the total opportunities of solar installations on that market. \\
+In addition, installer level fixed-effects are included to control for time-invariant characteristics of each installers.
+
+\subsection{Market Level Analysis}
+We next perform the analysis on a market level. We analyze the connection between market level ratings dispersion and the market level outcomes.  We use a regression model with fixed effects and clustered standard errors on the local market level. \\
+To measure the success of the market, we use the total number of accepted quotes. There are several reasons that we use accepted quotes as the performance metrics: 1. The goal of the market place is to help customers connect with installers. 2. The market itself, just like many other market place, is also evaluated by the transaction volume in a business sense. \\
+We create the dependent variable of interests using the following data transformation. For every local market $m$, we sum up the total number of quotes accepted per that month ($QuotesWon_{imt}$) for every installers $i$ on that market, and take the log transform.
+\begin{align*}
+SumQuotes_{m,t}=\sum_{i\in m} QuotesWon_{i,m,t}\\
+MarketActivity_{m,t}=\log (SumQuotes_{m,t}+1)
+\end{align*}
+By doing that, we convert the installer-monthly level panel data from previous section to a market-monthly level panel data so that we can exploit the variations on market level reviews dispersion to identify their impact on local market outcomes.  \\
+Using the indexes $m$ for local market, $t$ for month, the following regression equation is used to estimate the impact of ratings dispersion on the local market on the local market performance metrics.
+\begin{equation}
+    MarketActivity_{m,t+1}=\beta Ent_{m,t}+\beta Ent_{m,t}^2+Controls+\epsilon_{mt}
+\end{equation}
+
+Where $MarketActivity_{m,t+1}$ indicate the log of the total number of proposals accepted on market $m$ in month $t+1$, and the model link it to the $Ent_{i,m,t}$ - Entropy of reviews from all installers on that local market.
+
+
+\subsubsection{Control Variables}\hfill\\
+We use the following control variables for the market level analysis\\
+\textbf{State}. There are 33 different state represented in the data set, so we created 33 state dummies. Some market span across more than one state. In that case, we weighted state dummy with the percentage. \\
+\textbf{Experience}: similar to individual level experience. We created $AvgExp_{m,t}$ variable to represent the average experience of installers on the local market. \\
+\textbf{Average Ratings}: similar to individual level analysis, we use the $AvgRating_{m,t}$ to control for the average rating of installers on the local market. A higher $AvgRating$ may improve give the local market a boost across the board.
+\textbf{Market condition}:
+Similar to individual analysis, we use the total monthly revenues from that market to control for market conditions.
+\textbf{Price}: Follow the individual analysis, we look at the difference of average unit price between marketplace and off-marketplace. We use $PriceDiff_{m,t}$ to denote this variable.  \\
+\begin{align*}
+\log ZipRev_{m,t}=\log \sum_{j\in m}Rev_{j,t}
+\end{align*}
+ \textbf{The total number of reviews on the market } We use
+\begin{align*}
+SumReviews_{m,t}=\sum_{i\in m} Reviews_{i,m,t}
+\end{align*}
+
+
+\section{Results}
+We now present the results of our analysis. We first illustrate the important link between Ratings Dispersion and Installer activity level with a simple matching framework. We then present the summary statistics, followed by results of the panel regression models that focus on the link between ratings dispersion and activities intensity.
+\subsection{Summary Statistics}
+\begin{figure}
+	\centering
+	\includegraphics[width=0.85\linewidth]{histogram_by_high_low_ent.png}
+	\caption{ Histogram High vs. Low Entropy}
+	\label{histogram_by_ent_others}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{match_te_ent.png}
+	\caption{(TEMPORARY:  Matching illustrate the impact of high Entropy )}
+	\label{te_match_entothers}
+\end{figure}
+
+For the individual level analysis data, in table \ref{sumstats_ind} and \ref{corr_ind} we present the descriptive statistics and correlation matrix.  Likewise table \ref{sumstats_mkt} and \ref{corr_mkt} contains that on the local market level. We find that the correlations are generally in the expected direction and not a huge concern for the validity of regression analysis. \\
+ The $Entropy$ measure: We found that although the activity levels vary, one key factor that would explain the variation is the local market ratings $Entropy$. To illustrate this point, we divide the observations into two groups based on $ENT_{i,others,t}$ level ( their peers ratings dispersion/ (others' ratings entropy)).  With a median level equals 0.27, the $ENT_{others}$ level higher than 0.27 were coded as `high ratings dispersion', or `ent-others-high'.
+ A matching model matches installers on every important variables (own ratings, others' average ratings, experience, price difference, local market condition, state) except for $Ent_{others}$. Matching suggest that a higher ratings entropy is associated with a significant higher level activity intensity, as presented in \ref{te_match_entothers} and histogram in \ref{histogram_by_ent_others}. In the matching result presented in figure \ref{te_match_entothers}, the binary variable representing `ent-others-high' is significant with p-value 0.05 and coefficient 0.17.  We investigate the activity levels differences further with a panel regression model in the next section.  \\
+
+\input{summarystats_ind_dec17.tex}
+\input{summarystats_mkt_jan30.tex}
+\input{corr_individual_jan30.tex}
+\input{corr_MKT_jan30.tex}
+
+
+\subsection{Individual Installer}
+
+\input{reg_ind_0.tex}
+\input{reg_ind_11.tex}
+\input{reg_ind_12.tex}
+
+
+We first present the results pertaining to the impact of reviews entropy on individual installers as estimated by the regression models. These results are presented in table \ref{reg_ind_11} and \ref{reg_ind_12}.
+\paragraph{Signal}: the direct impact from `Signal', or the Average ratings, are negative albeit not consistently significant, after we controlled for installer and local market level characteristics.
+\paragraph{Noise}: we found consistent results associated with the set of variables representing `noise'. The estimates suggest that the direct effect of ratings dispersion ($\beta_{e1}$ in equation X  ) on activity intensity is positive and statistically significant, and the second order effect ($\beta_{e2}$ in equation X) is negative and statistically significant. In order words, the regression estimates indicates that for individual installers dispersion (of others' ratings) increase activity when dispersion is small, but deters activity when dispersion is large.\\
+We plot the effects in Figure \ref{marginsplot_ind_ent_self} to further illustrate the non-linear effect of entropy on activity intensity. We use the estimated regression coefficient from the model in table \ref{reg_ind_11}  to generate the marginal effects. As is apparent from the margins plot, the activity intensity first rise then fall with the ratings dispersion.
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{marginsplot_entothers.png}
+	\caption{Marginal Impact of Entropy of Reviews on Individual Level Activity}
+	\label{marginsplot_ind_ent_others}
+\end{figure}
+
+\input{reg_mkt_0.tex}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{marginsplot_entself.png}
+	\caption{Marginal Impact of Entropy of Reviews on Individual Level Activity}
+	\label{marginsplot_ind_ent_self}
+\end{figure}
+
+\subsection{Local Markets}
+\input{reg_mkt_1.tex}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{marginsplot_mkt_0.png}
+	\caption{Marginal Impact of Average Ratings on Market Level Activity}
+	\label{marginsplot_mkt_0}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{marginsplot_entmkt.png}
+	\caption{Marginal Impact of Market Reviews Entropy of Reviews on Market Level Activity}
+	\label{marginsplot_mkt_entmkt}
+\end{figure}
+
+We now move to discuss the ratings dispersion on total transactions on local market level. The results are presented in table \ref{reg_mkt_1}. Column (1) and column (2) used fixed effect and random effect, respectively.
+\paragraph{Signal}:The results on the local market level also suggest that after controlling for local market conditions, installer experience, price, the `signal' portion of the ratings are not significantly associated with the market level performance.
+\paragraph{Noise}: The `noise' portion of the ratings remains a significant factor. The estimate suggest that on the market level reviews dispersion is directly linked to higher number of total proposals accepted, as reflected in the coefficient estimates being positive and statistically significant. We also note that the second order effect is negative as the coefficient estimates associated with the square term is negative and statistically significant. We further illustrate this point with a margins plot using coefficients generated from estimates in column X in figure \ref{marginsplot_mkt_entmkt}. \\
+The relationship we found in this section is similar to what we presented earlier. The important distinction is that we are looking at local market at an entire performance unit and measuring the dispersion of ratings on the market level.
+\section{Text Mining}
+\input{reg_ind_2.tex}
+\input{reg_ind_3.tex}
+\input{reg_ind_4.tex}
+\input{reg_mkt_2.tex}
+In this section, we incorporate various methods to leverage the rich text information in reviews.  We first use an  NLP model called VADER to generate sentiment score of each reviews. We also apply BERT model to perform word embedding, and generated measures for texts dispersion. We replace quantitative metrics derived from ratings with text mining measures in our analysis.
+
+\subsection{Sentiment Score of reviews Texts}
+In this section, we introduce methods to generate sentiment scores on the reviews texts. We use VADER model to generate text sentiment score. VADER, is A Parsimonious Rule-Based Model for Sentiment Analysis of Social Media Text \citep{hutto2014vader}. Since reviews texts shares many stylistic similarities with social media text, this is an appropriate approach. For a piece of text, the language model produces a compound sentiment score from -1 to 1, with 1 representing very positive and -1  very negative sentiments.
+
+
+
+
+ Example 1:
+% \begin{displayquote}
+%\textit{Mike at (...) was friendly, courteous, professional and very helpful.  At first I did not know what kind of system I wanted, because my roof was too small and I had some trees in the way.  Mike had never installed a tracking system but he did recommend it.  It seemed like we would get the best "bang for the buck" with this system, so I went with it.  Mike had all subcontractor there on time as well as all the equipment.  It was up and running in less than a week.  I love it.  }
+%\end{displayquote}
+The above review received a compound sentiment score of 0.8622 and a five-star rating. \\
+ Example 2:
+%\begin{displayquote}
+%\textit{Do not hire (...)  to install a solar system. Do not hire (...) to do anything. Evan   and all his various companies and names  ARE NOT LICENCED OR INSURED. I was scammed by Mr. Evan (...) in December of 2013. He installed the system wrong and incomplete even though all the parts and materials were provided for him. Please take the time to do your research and check references and validate licenses and insurance information. It will save u more money than to trust a cheap con artist. All the info at (...)  is fraudulent lies. Evan Esposito is also known as (...).}
+%\end{displayquote}
+This received -0.7184 and an one-star rating.
+
+We apply this method to assign a sentiment score for every piece of reviews texts. Overall, the sentiment score correlates with ratings signficantly($corr = 0.8239$). It is further illustrated in figure \ref{sent_score_scatter} where the scatterplot of all reviews' sentiment scores and ratings is presented.  Follow the same process as discussed in earlier section, we construct variables $AvgSent_{i,t}$ in place of $Avg_{i,t}$, $AvgSentOthers_{i,m,t}$ in place of $AvgOthers_{i,m,t}$ to represent individual ratings in individual level analysis, $AvgSentMkt_{m,t}$ in place of $AvgMkt_{m,t}$ in market level analysis.
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{sentscore_violin.png}
+	\caption{Sentiment Scores and Ratings}
+	\label{sent_score_scatter}
+\end{figure}
+\subsection{Measures of ratings dispersion}
+ We constructed variables that measures variations in reviews to complement dispersions in rating. We show that these two measures are positively correlated, exhibits similar connection with installer and market level activity intensity, and also complement each other.
+\subsubsection{Capture Dispersion in Texts with Word Embedding model BERT}
+In addition to ratings, We want to leverage the rich information in the reviews texts. We hypothesize that the \textit{dispersion} in reviews texts shall also exhibit similar effect as the ratings as well as positively correlated with the entropy. A set of all 5 star reviews with praises might contain less information than a mix of 1, 2 and 5 stars. This is reflected in entropy as the later will have a higher entropy. We aim to design a measure that captures a similar concepts on texts. To achieve that goal of measuring reviews dispersions in texts,  we combine the methods inspired by \cite{hoberg2016text}, tweak it to apply to our data structure,  and updated it with a word embedding model called BERT , which we will describe later. \\
+Hoberg and Phillips' work involves measuring the similarity between two pieces of texts. In their case, they measure the distance of the two pieces of business descriptions from 10-k form and take $1 - distance$ to represent similarities between two business entities. Their methods include: 1) Vectorize each piece of text based on the distinct words it contains. 2) Normalize the vectors to unit length. and 3) Use the Cosine similarity to measure how similar are two word vectors. It is called cosine similarity because it measures the angle between the two vectors that represents the texts. If the angle is $0$, their similarity shall be $1$ and distance be $0$. The cosine similarity between the two vectors is calculated as follows: \\
+\begin{itemize}
+\item Cosine \textit{Similarity} between $V_{1}$ and $V{2} =(V_1 \cdot V_2)$
+\item Cosine \textit{Distance} between $V_{1}$ and $V{2}=1-(V_1 \cdot V_2)$
+\end{itemize}
+We incorporate the aforementioned cosine distance concept to measure dispersion in sets of reviews texts. It is achieved by enumerating all pairwise distances of reviews and take its statistical median. For example, on a set of 10 reviews texts pieces, we have 45 (45=$\binom{10}{2}$) pair-wise distances.  We then compute the median distances of these 45 similarity scores, denoted as $TD$ to represent the \textbf{Text Dispersion}. If the 10 pieces of texts are dissimilar from each other, they contain richer information and the median of these $45$ distances data shall be higher; and vice versa.  \\
+Similar to ratings entropy, we compute text-based dispersion on 3 different scopes and use them as Independent Variables of interest: \\
+
+\begin{itemize}
+\item 1. Text-based Dispersion for one's own reviews up to month $t$ is computed on the $N_{it}$ reviews available up to month $t$. It is calculated by computing the $N_{it}\times (N_{it}-1)/2$ cosine distance pairs and take the 50 percentile, which is denote as $TD_{self,i,t}$ (TD: Text-based Dispersion)\\
+\item 2. Text-based Dispersion for others' review up to month $t$ is computed on the $N_{i,others,t}$ reviews available up to month $t$ that is in focal installer $i$'s local market. It is calculated by computing the $N_{i,others,t}\times (N_{i,others,t}-1)/2$ cosine distance pairs and take the 50 percentile, which is denote as $TD_{Others,i,t}$ \\
+\end{itemize}
+We also compute the text-based dispersion for every \textit{market-month}: \\
+
+\begin{itemize}
+\item 3. Text-based Dispersion for a market $m$ at month $t$ is computed on the $N_{m,t}$ reviews available up to month $t$. Take the  $N_{mt}\times (N_{mt}-1)/2$ cosine distance pairs and take the 50 percentile and denote it as $TD_{market,i,t}$ \\
+\end{itemize}
+
+We now describe the process we took to \textit{vectorize} the review texts. In our study, we used a BERT word embedding model \citep{devlin2018bert}. BERT is short for Bidirectioanl Encoder Representations from Transformers (BERT). It is a natural language processing model that transforms texts into numeric vectors while also preserve the semantic meaning of the texts. It is getting widely applied in research and industry application such as Google Search. It belongs to the category of NLP methods called word embedding. We perform word embedding on the texts before computing distance. \\
+Some earlier literature such as \cite{hoberg2016text} used word counter vectors or combined counter vector with a tf-idf (term-frequency-inverse document frequency) weighting scheme in \cite{loughran2011liability}. It was an appropriate application for formal financial documents such as 10-K forms. In our application, we are dealing with texts that are informal writings and often with emotions expressed in the text. Simply capturing word frequencies will not be enough if similar emotions can be expressed with synonymous words. We want to produce vectors that will preserve the information and sentiment of the reviews texts despite use of synonyms and/or different styles. For example, consider 3 sentences: \\
+Sentence 1: they did a good job. \\
+Sentence 2: they did an awful job. \\
+Sentence 3: they did a great job. \\
+We want the distance between sentence 1 and 3 to be closer than the distance between 2 and 3 or 1 and 2. Word embedding method enables just that. Word embedding will project "good" and "great" to vectors that are closer together. Without word embedding, the distance between the 3 sentences will be similar ( with tf-idf weighting) or the same ( without tf-idf weighting, simply use a counter vectorizer). \\
+Under the BERT model vectorization, \\
+Similarity between sentence 1 and 2: 0.9134093016230975\\
+Similarity between sentence 2 and 3: 0.9053232267859165\\
+Similarity between sentence 1 and 3: 0.9737446020998256\\
+
+We used the python library via spaCy v2.1 to implement BERT. We converted every piece of reviews text, regardless of its original length, into a numeric vector of shape 768 $\times$ 1,  performed calculation on pairwise cosine distances and derived statistical means for every installer-month or market-market as previous mented. The end result is a set of variables representing the dispersion in texts, denoted as $TD_{self,i,t},TD_{Others,i,t},TD_{market,m,t}$ that are parallel to the Entropy measures $ENT_{self,i,t},ENT_{Others,i,t},ENT_{m,t}$ \\
+\subsection{Analysis using Variables Derived From Text Mining}
+We replaced measures derived from quantitative ratings (average ratings)  with the
+average sentiment scores and replace ratings entropy with text-based dispersion and re-run both individual and market level analysis. The results are presented in table \ref{reg_ind_3} and table \ref{reg_ind_4} . Likewise we run the same regression on the market level data and presented the results in table \ref{reg_mkt_2}. We observe the same type of inverse U shape for the marginal impact of text-based dispersion. This result comes at no surprise as the two measures of ratings dispersion are correlated significantly, although the magnitude of correlation isn't very high ().  We found that the even after we include both  \\
+
+\section{Robustness Check}
+\subsection{Endogeneity}
+
+We devised several empirical strategies to mitigate the potential drawbacks of endogeneity or omitted variables in our analysis. Regarding the individual level analysis, endogeneity could occur if there are unobserved factors that is significantly correlated with ratings dispersion that is also correlated with the activity intensities.\\
+Consider that we omitted a variable that captures installer professionalism or motivation, which we denote as $pro_{i,t}$. The actual function should be
+\begin{equation}
+ActInt_{i,m,t+1}=\delta pro_{i,t}+\beta_{1} Ent_{i,m,others,t}+\beta_{2}Ent_{i,m,others,t}^2+controls+\epsilon_{i,m,t}
+\end{equation}
+We argue that $pro_{it}$ would be \textit{negatively} correlated with reviews dispersion -- professional installers would be more motivated than others to deliver consistent products and services (CITE some thing).  \\
+
+In this case, the presence of omitted variable deflated the estimates of $\beta$ (CITE ECONOMETRIC stuff). \\
+
+
+\subsection{Robustness with different local market division}
+Although many similar studies used ZIP code to difine local markets(cite something from IO), we used unsupervised algorithm (OPTICS) to determine the market grouping. OPTICS algorithm requires a few parameter inputs: X, Y and Z. We used parameter XX after performing grid-search on a parameter space XXX and use Calinski-Harabasz Index to assess the appropriateness of the clustering.  \\ In addition, we used 4 digit ZIP code to define a market and the results are consistent ( INSERT RESULTS); we also use other OPTICS parameter and the results are consistent.  \\
+
+\subsection{Dynamic Panel model}
+In our main analysis we include both fixed effect for each installer to account for time invariant factors. We use a dynamic panel model to perform robustness check. The inclusion of lagged dependent variable ( Activity Intensity) aim to control for unobserved heterogeneity that may influence changes in the dependent variable and is time variant. For individual level estimation, the equation we estimate is changed into the following:
+\begin{equation}
+    ActInt_{i,m,t+1}=\gamma ActInt_{i,m,t-1}+Ent_{i,m,others,t}+Ent_{i,m,others,t}^2+
+    controls+\epsilon_{i,m,t}
+\end{equation}
+
+\begin{equation}
+    ActInt_{im,t+1}=\gamma Ent_{im,t-1}+\beta_{3}+\beta_{4} Ent_{i,self,t}+\beta_{5}Ent_{i,self,t}^2+
+   Controls+\epsilon_{imt}
+   \label{model_ind_dyn_1}
+\end{equation}
+
+\begin{equation}
+    ActInt_{im,t+1}=\gamma Ent_{im,t-1}+\beta_{6}+\beta_{7} Ent_{i,self,t}+\beta_{8}Ent_{i,self,t}^2+\beta_{9}Ent_{im,others}+\beta_{10}Ent_{im,self,t}^2+
+   Controls+\epsilon_{imt}
+   \label{model_ind_dyn_2}
+\end{equation}
+We expect $\gamma$ estimates to be positive. The results are still consistent as the $\beta$ coefficients associated with $Ent_{others}$($Ent_{others}^2$) are still positive (negative) as presented in table \ref{rob_addlag} and \ref{rob_addlag_withentself}.
+
+Likewise, we modify the market level model to include a lagged dependent variable $MarketActivity_{m,t-1})$
+\begin{equation}
+    MarketActivity_{m,t+1}=\gamma MarketActivity_{m,t-1}+\beta Ent_{m,t}+\beta Ent_{m,t}^2+Controls+\epsilon_{mt}
+\end{equation}
+and the results, presented in table \ref{rob_addlag_mkt}, are still consistent.
+\input{rob_installer_regression_dec25.tex}
+\input{rob_installer_regression_addlag_withentself.tex}
+\input{rob_mkt_regression_dec25.tex}
+
+\subsection{Market Level Alternative Measure of Success}
+\input{reg_mkt_3.tex}
+In the analysis of ratings dispersion on local market level performance, we used total quotes accepted by consumers to measure the success of marketplace. We present results using total quotes given out by installers, and it remains consistent, as table \ref{reg_mkt_3} shows.
+
+\subsection{Text-based Dispersion measure}
+\input{reg_ind_42.tex}
+We used median of cosine distances for measure of dispersion. The mean of cosine distances are consistent, per table \ref{reg_ind_42}.
+\subsection{Excluding Inactive Installers}
+Although we do not explicitly model the process of installers exiting platform, we are aware of its potential to drive results. We ran a robustness check excluding installers that have been inactive for two month ( making 0 proposals), with results presented in table \ref{rob_exclude_inactive}. The first two columns are results excluding these said installers ( cluster standard errors on market level - column (1); individual level - column (2)) . The results are virtually unchanged, especially on the independent variable of interests.
+\input{rob_excludeinactive_jan7.tex}
+
+\section{Discussions}
+\paragraph{Average (Signal)} : Most the specifications concerning the impact of average ratings captured negative (yet statistically insignificant) effects.   Interestingly, the model using sentiment score and Text-based dispersion measures (table \ref{reg_ind_3} and \ref{reg_ind_4} have shown more consistent and significant negative coefficients. After we control for other things, being rated higher or viewed more positive is associated with a lower level of activity intensity going forward. \\
+
+
+
+\paragraph{EntOthers (Noise)} The individual level analysis pertain to $EntOthers$ covariates all revealed an inverse-U shape impact.
+\paragraph{EntSelf (Noise)}
+
+\paragraph{Market Level Impact}
+
+\paragraph{Methodology - text mining} We incorporated two text mining methods that 1) - gave reviews texts a one-dimensional sentiment score and 2) utilize word embedding model to measure texts similarity with precision. We demonstrated that the text mining tools are great complement to the quantitative data.
+\begin{APPENDIX}{Tables and Figures}
+
+\end{APPENDIX}
+\clearpage
+% Appendix here
+% Options are (1) APPENDIX (with or without general title) or
+%             (2) APPENDICES (if it has more than one unrelated sections)
+% Outcomment the appropriate case if necessary
+%
+% \begin{APPENDIX}{<Title of the Appendix>}
+% \end{APPENDIX}
+%
+%   or
+%
+% \begin{APPENDICES}
+% \section{<Title of Section A>}
+% \section{<Title of Section B>}
+% etc
+% \end{APPENDICES}
+
+
+% Acknowledgments here
+\ACKNOWLEDGMENT{ .}
+
+
+% References here (outcomment the appropriate case)
+
+% CASE 1: BiBTeX used to constantly update the references
+%   (while the paper is being written).
+%\bibliographystyle{informs2014} % outcomment this and next line in Case 1
+%\bibliography{<your bib file(s)>} % if more than one, comma separated
+
+% CASE 2: BiBTeX used to generate mypaper.bbl (to be further fine tuned)
+%\input{mypaper.bbl} % outcomment this line in Case 2
+
+%If you don't use BiBTex, you can manually itemize references as shown below.
+
+
+\bibliographystyle{informs2014} % outcomment this and next line in Case 1
+\bibliography{solarlits} % if more than one, comma separated
+
+
+%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%
+

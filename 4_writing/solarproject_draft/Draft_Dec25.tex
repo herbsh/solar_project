@@ -1,0 +1,399 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Author template for Management Science (mnsc) for articles with e-companion (EC)
+%% Mirko Janc, Ph.D., INFORMS, mirko.janc@informs.org
+%% ver. 0.95, December 2010
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\documentclass[mnsc,blindrev]{informs3} % current default for manuscript submission
+%\documentclass[mnsc,nonblindrev]{informs3}
+\documentclass[msom,blindrev]{informs3} 
+\OneAndAHalfSpacedXI % current default line spacing
+%%\OneAndAHalfSpacedXII 
+%%\DoubleSpacedXII
+%\DoubleSpacedXI
+
+% If hyperref is used, dvi-to-ps driver of choice must be declared as
+%   an additional option to the \documentstyle. For example
+%\documentclass[dvips,mnsc]{informs3}      % if dvips is used
+%\documentclass[dvipsone,mnsc]{informs3}   % if dvipsone is used, etc.
+
+% Private macros here (check that there is no clash with the style)
+\usepackage{graphicx}
+
+% Natbib setup for author-year style
+\usepackage{natbib}
+ \bibpunct[, ]{(}{)}{,}{a}{}{,}%
+ \def\bibfont{\small}%
+ \def\bibsep{\smallskipamount}%
+ \def\bibhang{24pt}%
+ \def\newblock{\ }%
+ \def\BIBand{and}%
+
+\usepackage{booktabs}
+
+%%package to comment a whole block 
+\usepackage{verbatim}
+%% Setup of theorem styles. Outcomment only one.
+%% Preferred default is the first option.
+\TheoremsNumberedThrough     % Preferred (Theorem 1, Lemma 1, Theorem 2)
+%\TheoremsNumberedByChapter  % (Theorem 1.1, Lema 1.1, Theorem 1.2)
+\ECRepeatTheorems
+
+%% Setup of the equation numbering system. Outcomment only one.
+%% Preferred default is the first option.
+\EquationsNumberedThrough    % Default: (1), (2), ...
+%\EquationsNumberedBySection % (1.1), (1.2), ...
+
+% For new submissions, leave this number blank.
+% For revisions, input the manuscript number assigned by the on-line
+% system along with a suffix ".Rx" where x is the revision number.
+\MANUSCRIPTNO{}
+
+%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%
+
+% Outcomment only when entries are known. Otherwise leave as is and
+%   default values will be used.
+%\setcounter{page}{1}
+%\VOLUME{00}%
+%\NO{0}%
+%\MONTH{Xxxxx}% (month or a similar seasonal id)
+%\YEAR{0000}% e.g., 2005
+%\FIRSTPAGE{000}%
+%\LASTPAGE{000}%
+%\SHORTYEAR{00}% shortened year (two-digit)
+%\ISSUE{0000} %
+%\LONGFIRSTPAGE{0001} %
+%\DOI{10.1287/xxxx.0000.0000}%
+
+% Author's names for the running heads
+% Sample depending on the number of authors;
+% \RUNAUTHOR{Jones}
+% \RUNAUTHOR{Jones and Wilson}
+% \RUNAUTHOR{Jones, Miller, and Wilson}
+% \RUNAUTHOR{Jones et al.} % for four or more authors
+% Enter authors following the given pattern:
+%\RUNAUTHOR{}
+
+% Title or shortened title suitable for running heads. Sample:
+% \RUNTITLE{Bundling Information Goods of Decreasing Value}
+% Enter the (shortened) title:
+\RUNTITLE{Signal and Noise of Reviews}
+
+% Full title. Sample:
+% \TITLE{Bundling Information Goods of Decreasing Value}
+% Enter the full title:
+\TITLE{The Signal and Noise of Performance Reviews in an Online Market Place: The Case of Residential Solar Installations}
+
+% Block of authors and their affiliations starts here:
+% NOTE: Authors with same affiliation, if the order of authors allows,
+%   should be entered in ONE field, separated by a comma.
+%   \EMAIL field can be repeated if more than one author
+\ARTICLEAUTHORS{%
+\AUTHOR{Snidely Slippery}
+\AFF{Department of Bread Spread Engineering, Dairy University, Cowtown, IL 60208, \EMAIL{slippery@dairy.edu}} %, \URL{}}
+\AUTHOR{Marg Arinella}
+\AFF{Institute for Food Adulteration, University of Food Plains, Food Plains, MN 55599, \EMAIL{m.arinella@adult.ufp.edu}}
+% Enter all authors
+} % end of the block
+
+\ABSTRACT{%
+This paper  
+% Enter your abstract
+}%
+
+% Sample
+%\KEYWORDS{deterministic inventory theory; infinite linear programming duality;
+%  existence of optimal policies; semi-Markov decision process; cyclic schedule}
+
+% Fill in data. If unknown, outcomment the field
+\KEYWORDS{marketplace, reviews} \HISTORY{Update: November, 2019}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Samples of sectioning (and labeling) in MNSC
+% NOTE: (1) \section and \subsection do NOT end with a period
+%       (2) \subsubsection and lower need end punctuation
+%       (3) capitalization is as shown (title style).
+%
+%\section{Introduction.}\label{intro} %%1.
+%\subsection{Duality and the Classical EOQ Problem.}\label{class-EOQ} %% 1.1.
+%\subsection{Outline.}\label{outline1} %% 1.2.
+%\subsubsection{Cyclic Schedules for the General Deterministic SMDP.}
+%  \label{cyclic-schedules} %% 1.2.1
+%\section{Problem Description.}\label{problemdescription} %% 2.
+
+% Text of your paper here
+ 
+\section{Introduction}
+
+Solar cells, also called photovoltaic cells, convert sunlight directly into electricity without carbon emissions. Today, electricity from solar cells has become cost competitive in many regions and photovoltaic systems are being deployed at large scales to help power the electric grid \citep{nrel.gov}. 
+It is one of the fastes growing energy generating technology with a dazzling 34\% growth worldwide in 2017  \citep{iea2018snapshot}. 
+Solar energy is blooming in the US and the world. Residential solar PV capacity increased by 300\%  in last ....year (REFERENCE)\\ 
+Online marketplaces is an innovative business model to boost the rooftop solar panel adoption. It serves as an intermediary which connects buyers and made the whole process more transparent \citep{dorsey2019access}. There is an increasing trend of installing rooftop panels through online market places. Consumer interest doubled in 11 states between 2017 to 2018, according to an analysis of  website traffic \citep{energysageintel19}.  \\
+Online reviews are essential part of the customer experience in platforms. In fact, there are studies that show that reviews have significant impact on customers'  decision making process, especially in products and services that has searching and experiencing attributes \citep{zimmermann2018decomposing}. 
+
+
+In the literature, there are papers that show the positive impact of reviews on sales. There are also other papers that demonstrate  (AVERAGE LIT (Literature considered average effect))
+
+In this paper, different from this literature, our primary goal is to study the impact of dispersion of ratings on the  performance metric of the platform, which is a composite of many firms. To the best of our knowledge, there is no prior work that has studied this. 
+
+Our paper is also related to papers that investigates the effect of ratings on a single firm's performance metrics. In that stream, there is no consensus about the ultimate impact of dispersion of ratings on the firm's performance metric. Studies have demonstrated positive impacts \citep{chintagunta2010effects,chevalier2006effect,dellarocas2007exploring}, insignificant impact \citep{duan2008online}, and negative impacts in some instances \citep{wang2015user}. 
+
+Different from these papers, we took a marketplace perspective. The marketplace perspective is an important one, especially from the marketplace providers' perspectives. Many new businesses are running a marketplace business model, and have designed the customer ratings functionality an essential part of the platform experience (CITE SOMETHING). In our work, we use the total number of successful proposals on a relevant local market to gauge the health of the marketplace. Total number of success proposals as a performance metric is consistent with common business practices in the investment circle \citep{boris_2018,galston_2017}. 
+
+Our objective is to understand the impact of review dispersion on the activity level of each participating supplier on the platform, which has not been studied before.
+
+
+
+\section{How Reviews Dispersion Impacts Activity Intensity(Literature Review) }
+ In this section we describe several mechanisms by which reviews dispersion may impact installers activity intensity on a platform. 
+\section{Data and Settings}
+We analyzed the actions and outcomes of an online marketplace. We obtained, via collaboration with the marketplace company, the full record of customer reviews and installer actions on a monthly level from 2013 to 2018. In this section, we give an overview of the setting of the marketplace and provide more details about our data. 
+\subsection{Market Place}
+Our analysis are based off the activities on an online marketplace(MKT) for resident solar installations. MKT is an independent comparison shopping website that provided consumers an outlet for shopping for solar installations. The website provides consumers with access to hundreds of vetted solar installers as well as information about solar technologies and solutions. 
+
+\paragraph{How MKT works:}
+1. Customers visit MKT website and enter their property address along with other details.  \\
+2. Marketplace informs the installer the arrival of customer along with customer's requirement and preferences. \\
+3. Installers decide to make a customized proposal the the customer. This is called place a bid. \\
+4. The customer may proceed and choose one installer(a match is successfully made) or give up this process(go for another offline option, or give up on installing solar for the moment) \\ 
+We obtained a rich panel of MKT data with all its vetted installers, installers' monthly action and performance(bids made and bids won) and all its reviews(text content and ratings) from the beginning of the platform to April of 2018. 
+
+\subsection{Installers}
+Solar Installers decision on the platform: 
+
+\begin{enumerate}
+\item  \textbf{Join}. Join the platform. It is worth noting that the marketplace actively reach out to solar installers to recruit them to join to platform and help them set up the website. So unlike physical businesses, the fixed cost of entry is minimal for online marketplace \citep{haddad2015consumer}. Thus, the process of joining the platform is not the focus of this study. \\
+\item  \textbf{Active and put in efforts}. Actively monitor the platform and make bids to attract customer. We are interested in the\textit{ intensity of efforts}, which is measured by how many proposals that an installer makes per month.(FIND REFERENCE THAT THIS TAKES TIME AND EFFORT; IS THE ESSENTIAL DECISION)\\
+\end{enumerate}
+
+Lastly, we don't observe quitting the platform the same way as physical store closes off. We simply observe inactive profiles. 
+
+
+\subsection{Customers}
+Customers will join the platform, provide the basic infos including their property details. They will receive installer proposals. If the customer ended up working with the installer, they will have an opportunity to leave a review. \\
+The platform verifies the customer who left reviews. So we can treat reviews as authentic and not manipulated. 
+
+ 
+
+\subsection{Defining Local Market} 
+Solar installers are in essence competing on a number of local markets with adjacent installers.  This is due to these characteristics of solar installations: sollar installation is a combination of product and service; the service component requires installers' multiple visits to the customer site;  customers tend to only seek out local installers and installers tend to only compete locally. This is also reflected in MKT's setting- installers specify a service region; installers will only be notified of customer arrival and act on the lead if the customer falls into that region. Customer also sees installer's distance to their locations and might factor that in their decision. Thus, we want to create a distance and density based \textit{clusters} that reflect the local competition feature. 
+We also do not want to simply use state of county boarder because it was quite common for installers to cross county and state lines to serve customers. Instead, we create local market geographic division following the following steps: 
+\begin{enumerate}
+	\item First, for every MKT installer, we determine its location using the 5-digit zip code they listed and the representative coordinates of that Zipcode based on data provided by the US Census(https://www.census.gov/geo/maps-data/data/gazetteer.html). 
+	\item  We run a location and density based clustering algorithm(OPTICS, more details below) to cluster the pool of nationwide installers into clusters, which we later refer to as "markets".  Ordering points to identify the clustering structure (OPTICS) is an algorithm for finding density-based clusters in spatial data.  We set the radius to be 50 miles(can change) and arrived at X clusters, each cluster contains X to X installers. We use this cluster to define our market boundary geographically.   
+	\item we used parameters X and X for OPTICS algorithm after we performed grid search on the parameters from X to X. We use Calinski-Harabasz index to evaluate the clustering parameter and choose the parameter that optimized the Calinski-Harabasz index, while also reflected the reality on the ground that installer usually install locally ( within 1.5hrs of driving distance).
+\end{enumerate}
+The figure X and X illustrated the geographic distribution of all installers in the dataset ( left) and the centroid of local markets after OPTICS clustering(right). 
+
+\subsubsection{Local Markets and Market Condition Data}
+TALK ABOUT MATCHING tts WITH MARKET BOUNDARIES 
+Once the algorithm gave us the clusters that defines market divisions, we augment the data with Tracking The Sun data to capture local market conditions. The goal of incorporating Offline Market Characteristics is to capture both installer and customer' outside options. We use the same Market definition from OPTICS clustering and computed the following aggregate level variables: 
+\begin{enumerate}
+	\item Market Revenue: the sum of all solar installations within that market during a month. The market revenue variable measures the total opportunities of solar installations on that market. 
+\end{enumerate} 
+\subsection{Summary Statistics}
+In the merged dataset, we have a installer-month level panel dataset that depicted installers' actions. The dataset features: 
+\begin{itemize}
+\item Solar installers: 416 different installers
+\item Time period: from 2013 to 2018
+\item Ratings and reviews: 3607 pieces of review records with the rating, text content, timestamp, and the installer that is associated  
+\end{itemize}
+\section{Model Specification}
+\textbf{Overviews}: first we introduce the key DV, dispersion of the reviews. Then we take a look at the impact of the key DV on individual firm level; then we look at the impact of dispersion on platform level in section XX.  
+
+\subsection{Measure Reviews Dispersion}
+\label{subsection_measure_dispersion}
+We are first interested in measuring the dispersion in ratings, i.e, the quantitative information provided by the ratings. Customer leave a piece of reviews after their solar installation experience. The reviews is composed of a rating ( from 1 to 5 stars) and a piece of texts. We first discribe how we measure reviews dispersion from the quantitative ratings information. We also introduce an innovative word embedding model that measures reviews dispersion from the texts data. 
+\subsubsection{Entropy of Reviews Rating}
+We use entropy as the independent variable of interests. Entropy is a common measure in information theory. It is superior to other measures, such as coeffecient of variance, because the distribution of ratings is not normally distributed. Moreover, the coefficient of variance is significantly correlated with entropy measure (insert a figure). We use entropy to capture the information content in raviews' rating. \\ 
+Following the following formula:  \\ 
+\begin{equation}
+H(X)=-\sum P(X)log(1/P(x)))
+\end{equation}
+For example, we measure the ratings dispersion on a set of 5 reviews, they all got 4-stars (out of 5). Therefore, we will be applying the calculation on a set $\{4,4,4,4,4\}$. Following the formula, this set of reviews has an entropy of X. Alternatively, if we have a set of reviews as $\{3,5,3,5,4\}$, the entropy of this set of reviews is X. Although both have the same average, the second set of ratings are more informative, and has a higher entropy measure. \\
+
+For every installer-month, we calculate entropy on two scopes: \\
+1. Entropy on own reviews, up to that month, denote as $ENT_{self}$ \\ 
+2. Entropy on peer installers' reviews, up to that month, denote as $ENT_{others}$ \\
+We also calculate entropy on the local market level:\\
+3. Entropy of all reviews on local markets, up to that month, which we later denote as $ENT_{mkt}$. 
+\subsection{Word Embedding and Measure Reviews Text Dispersion}
+We use a BERT word embedding model. We first vectorize every piece of texts using embedding. The advantage of word embedding... \\
+For every set of reviews, we use the following steps to measure the dispersion: ADD STEPS \\
+ADD REGRESSION MODELS USING THIS MEASURE 
+\subsection{Installer Level Analysis}
+We aim to find the connection between ratings dispersion on installer activity intensities. The available data were used to construct a panel data set where the unit of analysis is the the measure of activity intensities (log of proposals generated plus one) of a particular installer $i$ at a specific local market $m$ during a month $t$ ($ActInt_{i,m,t}$). Activity intensity during a month are influenced by the  
+We use quotes given to proxy the intensity of activities. 
+
+Using the indexes $i$ for installer, $m$ for local market, and $t$ for month, the following regression equation is used to estimate the impact of ratings dispersion on activity intensities: 
+\begin{equation}
+    ActInt_{im,t+1}=\beta_{0}+\beta_{e1} Ent_{im,others,t}+\beta_{e2}Ent_{im,others,t}^2+  
+   Controls+\epsilon_{imt} 
+   \label{model_ind}
+\end{equation}
+\begin{comment}
+\begin{equation}
+    ActInt_{i,m,t+1}=Ent_{i,m,others,t}+Ent_{i,m,others,t}^2+  
+    avg_{i,t}+avg_{others,m,t}+\log{Experience_{i,t}}+ 
+    PriceDiff_{i,m,t}+State_{m,i}+\epsilon_{i,m,t} 
+\end{equation}
+\end{comment}
+Where $ActInt_{i,t+1}$ indicate the activity intensity of installer $i$ in month $t+1$, and the model link it to the $Ent_{i,others,t}$ - Entropy of reviews from other installers on that local market. The error term $\epsilon$ represents factors that affect installer activity intensity that are unobservables in the data.  
+\subsubsection{Control Variables\\}
+Equation \ref{model_ind} includes several control variables. Installer level fixed-effects are included to control for time-invariant characteristics of each installers. \\	\textbf{State}: State dummies are included to account for state level policy effects. \\
+\textbf{Price}:   $PriceDiff_{i,t}$: we use Tracking the Sun data to find the installers' prices. We first find the unit price: price per KW. Price per KW is a common way to assess the price level of a solar system, as the final price tag of the solar system will be dependent on the size. We then compute the variable $PriceDiff_{i,t}$ as the difference in unit price between installer and the average unit price of their competitors on the local market. \\
+\textbf{Average Ratings}: the average reviews of installer themselves $avg_{i,t}$ and the average reviews of their competitors $avg_{others,t}$ on the market. \\
+\textbf{Experience}: the number of years the installer has been installing solar systems. We obtain that information from installers' website. 
+
+\subsection{Market Level Analysis}
+We next analyze the connection between market level ratings dispersion measures and the market level outcomes. \\
+ 
+To measure the success of the market, we use the total number of accepted quotes. There are several reasons that we use accepted quotes as the performance metrics: 1. The goal of the market place is to help customers connect with installers. 2. The market itself, just like many other market place, is also evaluated by the transaction volume in a business sense. \\
+We perform the following data transformation. For every local market $m$, we sum up the total number of quotes accepted per that month ($QuotesWon_{imt}$) for every installers $i$ on that market, and take the log transform. 
+\begin{align*}
+SumQuotes_{m,t}=\sum_{i\in m} QuotesWon_{i,m,t}\\
+LogQuotes_{m,t}=\log (SumQuotes_{m,t}+1)
+\end{align*}
+By doing data transformation, we convert the installer-monthly level panel data from previous section to a market-monthly level panel data so that we can exploit the variations on market level reviews dispersion.  \\
+Using the indexes $m$ for local market, $t$ for month, the following regression equation is used to estimate the impact of ratings dispersion on the local market on the local market performance metrics. 
+\begin{equation}
+    \log(TotWon_{m,t+1}+1)=Ent_{m,t}+Ent_{m,t}^2+Controls+\epsilon_{mt}
+\end{equation}
+
+\begin{comment}
+
+
+ \log{TotWon_{m,t+1}+1}=Ent_{m,t}+Ent_{m,t}^2+avg_{m,t}+\log {SumReviews_{m,t}+1}+\\
+\log SumReviews_{m,t}^2+\log ZipRev_{m,t}+\log ZipRev_{m,t}^2+state_{m}
+ \end{comment}
+Where $TotWon_{m,t+1}$ indicate the total number of proposals accepted on market $m$ in month $t+1$, and the model link it to the $Ent_{i,m,t}$ - Entropy of reviews from all installers on that local market following the computation that was introduced in section X.   
+
+
+\subsubsection{Control Variables}
+In order to account for other factors that could impact activities on the local market, we introduce the following control variables. 
+
+ \textbf{State}. There are 33 different state represented in the dataset, so we created 33 state dummies. Some market span across more than one state. In that case, we use a weighted state dummy approach, that the state dummy takes the value between 0 and 1 depending on the fraction of installers that are from each state. \\
+  \textbf{Market condition}: 
+we find the total monthly revenues from that market. 
+\begin{align*}
+\log ZipRev_{m,t}=\log \sum_{j\in m}Rev_{j,t}
+\end{align*}
+ \textbf{The total number of reviews on the market } We use 
+\begin{align*}
+SumReviews_{m,t}=\sum_{i\in m} Reviews_{i,m,t}
+\end{align*}
+
+
+\section{Results}
+We now presetn the results of our analysis. In table X and X, we present the descriptive statistics and correlation matrix for the independent and dependent variables on individual installer level and local market level. We find that the correlations are generally in the expected direction and not a huge concern for the validity of regression analysis. 
+
+\subsection{Individual Installer}
+We first present the results pertaining to the impact of reviews entropy on individual installers as estimated by the regression models. These results are presented in table \ref{table_regression_ind}.  The standard errors are clustered. Column (1) ..... The estimates suggest that the direct effect of ratings dispersion ($\beta_{e1}$ in equation X) on activity intensity is positive and statistically significant, and the second order effect ($\beta_{e2}$ in equation X) is negative and statistically significant. In order words, the regression estimates indicates that for individual installers dispersion (of others' ratings) increase activity when dispersion is small, but deters activity when dispersion is large.\\
+We plot the effects in Figure X to further illustrate the non-linear effect of entropy on activity intensity. We use the estimated regression coefficient from the model in table X to generate the marginal effects. As is apparent from the margins plot, the activity intensity first rise then fall with the ratings dispersion. 
+
+\subsection{Local Markets}
+We now move to discuss the ratings dispersion on total transactions on local market level. The results are presented in table X. Column (1) ... (4)... The estimate suggest that on the market level, reviews dispersion is directly linked to higher number of total proposals accepted, as reflected in the coefficient estimates being positive and statistically significant. We also note that the second order effect is negative as the coefficient estimates associated with the square term is negative and statistically significant. We further illustrate this point with a margins plot using coefficients generated from estimates in column X. \\
+The relationship we found in this section is similar to what we presented earlier. The important distinction is that we are looking at local market at an entire performance unit and measuring the dispersion of ratings on the market level.  
+\section{Robustness Check}
+1. Discussion of endogeneity \\
+We now discuss the issues of endogeneity in our empirical strategies. Regarding the individual level analysis, endogeneity could occur if there are unobserved factors that is significantly correlated with ratings dispersion that is also correlated with the activity intensities.\\
+Consider that we omitted a variable that captures installer professionalism or motivation, which we denote as $pro_{i,t}$. We argue that $pro_{it}$ would be negatively correlated with reviews dispersion -- professional installers would be more motivated than others to deliver consistent products and services. We also hypothesize that  $pro_{it}$ is positively correlated with activity intensity. In this case, the presence of omitted variable deflated the estimates of $\beta$ (CITE ECONOMETRIC stuff). \\
+2. Robustness checks with different model specifications.  \\
+- different time lag.  \\
+- use CV instead of entropy(show CV is correlated with entropy but less differentiating) \\ 
+
+3. Robustness with local market division\\
+Although many similar studies used ZIP code to difine local markets(cite something from IO), we used unsupervised algorithm (OPTICS) to determine the market grouping. OPTICS algorithm requires a few parameter inputs: X, Y and Z. We used parameter XX after performing grid-search on a parameter space XXX and use Calinski-Harabasz Index to assess the appropriateness of the clustering.  \\ In addition, we used 4 digit ZIP code to define a market and the results are consistent ( INSERT RESULTS); we also use other OPTICS parameter and the results are consistent.  \\
+
+4. Dynamic Panel model. We include both fixed effect for each installer and include a lagged dependent variable. The inclusion of lagged dependent variable ( Activity Intensity) will control for unobserved heterogeneity that may influence changes in the dependent variable. For individual level estimattion, the equation we estimate is changed into the following: 
+\begin{equation}
+    ActInt_{i,m,t+1}=ActInt_{i,m,t-1}+Ent_{i,m,others,t}+Ent_{i,m,others,t}^2+  
+    controls+\epsilon_{i,m,t} 
+\end{equation}
+The results are still consistent as presented in table \ref{rob_addlag}. 
+Likewise, we modify the market level model to include a lagged dependent variable $\log(TotWon_{m,t-1})$
+\begin{equation}
+    \log(TotWon_{m,t+1}+1)=\log(TotWon_{m,t-1}+1)+Ent_{m,t}+Ent_{m,t}^2+Controls+\epsilon_{mt}
+\end{equation} 
+and the results, presented in table \ref{rob_addlag_mkt} are still consistent. 
+
+
+\begin{APPENDIX}{Tables and Figures}
+ \clearpage
+
+\input{summarystats_ind_dec17.tex}
+\input{summarystats_mkt_dec17.tex}
+\input{corr_individual_dec15.tex}
+\input{corr_MKT_dec15.tex}
+\input{regression_ind_dec18.tex}
+\input{regression_mkt_dec18.tex}
+\input{rob_installer_regression_dec25.tex}
+\input{rob_mkt_regression_dec25.tex}
+\begin{figure}
+	\centering
+	\includegraphics[width=1.2\linewidth]{national_installers}
+	\caption{All Installers}
+	\label{fig:nationalinstallers}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=1.2\linewidth]{markets}
+	\caption{Local Market Centroids}
+	\label{fig:markets}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.7\linewidth]{marginsplot_entothers}
+	\caption{Marginal Impact of Entropy of Reviews on Individual Level Activity}
+	\label{fig:markets}
+\end{figure}  
+\end{APPENDIX}
+\clearpage
+% Appendix here
+% Options are (1) APPENDIX (with or without general title) or
+%             (2) APPENDICES (if it has more than one unrelated sections)
+% Outcomment the appropriate case if necessary
+%
+% \begin{APPENDIX}{<Title of the Appendix>}
+% \end{APPENDIX}
+%
+%   or
+%
+% \begin{APPENDICES}
+% \section{<Title of Section A>}
+% \section{<Title of Section B>}
+% etc
+% \end{APPENDICES}
+
+
+% Acknowledgments here
+\ACKNOWLEDGMENT{ .}
+
+
+% References here (outcomment the appropriate case)
+
+% CASE 1: BiBTeX used to constantly update the references
+%   (while the paper is being written).
+%\bibliographystyle{informs2014} % outcomment this and next line in Case 1
+%\bibliography{<your bib file(s)>} % if more than one, comma separated
+
+% CASE 2: BiBTeX used to generate mypaper.bbl (to be further fine tuned)
+%\input{mypaper.bbl} % outcomment this line in Case 2
+
+%If you don't use BiBTex, you can manually itemize references as shown below.
+
+
+\bibliographystyle{informs2014} % outcomment this and next line in Case 1
+\bibliography{solarlits} % if more than one, comma separated
+
+
+ 
+%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%
+

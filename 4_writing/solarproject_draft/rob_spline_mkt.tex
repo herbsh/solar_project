@@ -1,0 +1,33 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[]
+\centering
+ \begin{threeparttable}[t]
+\begin{tabular}{@{}lcc@{}}
+\toprule
+                        & (I)            & (II)           \\ 
+                        & Market Transaction       & Market Transaction       \\
+Variables               &   &   \\ \midrule
+Rating\_Entropy\_Mkt\_1 & 1.197***       &                \\
+                        & (0.000)        &                \\
+Rating\_Entropy\_Mkt\_2 & -1.144**       &                \\
+                        & (0.008)        &                \\
+Rating\_Entropy\_Mkt\_1 &                & 2.157***       \\
+                        &                & (0.000)        \\
+Rating\_Entropy\_Mkt\_2 &                & -2.100***      \\
+                        &                & (0.000)        \\
+Rating\_Entropy\_Mkt\_3 &                & 0.356          \\
+                        &                & (0.606)        \\
+Observations            & 642            & 642            \\
+Adjusted R$^2$             & 0.720          & 0.732          \\
+AIC                     & 1101.0         & 1074.3         \\
+BIC                     & 1136.7         & 1114.4         \\ \bottomrule
+\end{tabular}%
+\begin{tablenotes}
+\item Note: $p$-value in parentheses; $^\star p<0.05;^{\star\star} p<0.01;^{\star\star\star} p<0.001 $
+\end{tablenotes}
+\end{threeparttable}
+\caption{Alternative Inverted-U Testing: Spline Regressions (Market Level)}
+\label{rob_spline_mkt}
+\end{table}

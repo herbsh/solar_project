@@ -1,0 +1,43 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\begin{threeparttable}[t]
+\begin{tabular}{@{}lcc@{}}
+\toprule
+                         & (I)            & (II)           \\
+                         & Market Transaction       & Market Transaction       \\
+Variables                &   &   \\ \midrule
+Rating\_Entropy\_Mkt     & 1.501***       & 0.751*         \\
+                         & (0.000)        & (0.016)        \\
+Rating\_Entropy\_Mkt$^2$ & -2.456***      & -1.609***      \\
+                         & (0.000)        & (0.000)        \\
+Average\_Rating\_Mkt     & -0.207         & -0.141         \\
+                         & (0.169)        & (0.476)        \\
+Average\_Experience      & 0.0102         & -0.00118       \\
+                         & (0.157)        & (0.882)        \\
+Price\_Difference\_Mkt   & 0.0349         & -0.313         \\
+                         & (0.865)        & (0.089)        \\
+Market\_LogRevenue       & -0.0264        & 0.0403         \\
+                         & (0.502)        & (0.051)        \\
+Market\_Transaction$_{t}$&                & 0.0238         \\
+                         &                & (0.685)        \\
+Market\_Transaction$_{t-1}$    &                & -0.00533       \\
+                         &                & (0.917)        \\
+Market\_Transaction$_{t-2}$   &                & 0.198**        \\
+                         &                & (0.001)        \\
+Market Fixed Effect      & Yes            & No             \\
+Weighted State Dummies   & Yes            & Yes            \\
+%Constant                 & 2.176**        &                \\
+%                         & (0.003)        &                \\
+Observations             & 642            & 421            \\ \bottomrule
+\end{tabular}%
+\begin{tablenotes}
+\item Note: $p$-value in parentheses; $^\star p<0.05;^{\star\star} p<0.01;^{\star\star\star} p<0.001$
+\end{tablenotes}
+\end{threeparttable}
+\vspace{10pt}
+\caption{Robustness Check - Market Level Dynamic Panels}
+\label{rob_mkt_dynamic}
+\end{table} 

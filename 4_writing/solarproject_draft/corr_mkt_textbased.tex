@@ -1,0 +1,18 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\begin{tabular}{lcccccccc} \toprule
+Variables                   & (1)    & (2)    & (3)   & (4)    & (5)    & (6)        & (7)     \\\midrule
+(1) Text\_Dispersion\_Mkt   & 1      & \multicolumn{6}{l}{}                                    \\
+(2) Rating\_Entropy\_Mkt    & 0.068  & 1      & \multicolumn{5}{l}{}                           \\
+(3) Average\_Sentiment\_Mkt & -0.43  & 0.118  & 1     & \multicolumn{4}{l}{}                   \\
+(4) Average\_Rating\_Mkt    & -0.097 & -0.624 & 0.173 & 1      & \multicolumn{3}{l}{}          \\
+(5) Average\_Experience              & -0.113 & 0.198  & 0.053 & -0.107 & 1      & \multicolumn{2}{l}{} \\
+(6) Price\_Difference\_Mkt        & 0.127  & -0.018 & 0.017 & -0.041 & -0.012 & 1          &         \\
+(7) Market\_LogRevenue      & -0.087 & 0.157  & 0.23  & -0.041 & 0.498  & -0.126     & 1 \\\bottomrule
+\end{tabular}%
+\caption{Correlation Matrix -  Market Level Text-based Analysis}
+\label{ corr_mkt_text}
+\end{table} 

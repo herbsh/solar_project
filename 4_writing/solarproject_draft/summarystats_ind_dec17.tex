@@ -1,0 +1,21 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{graphicx}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+Variables               & N     & Mean    & Standard Deviation & Min    & Max   \\ \midrule
+Rating\_Entropy\_Self   & 4,562 & 0  & 0.217  & -0.0985 & 0.9015     \\
+Rating\_Entropy\_Others & 4,562 & 0   & 0.183  & -0.227  & 0.773     \\
+Average\_Rating\_Self   & 4,562 & 4.531   & 1.316  & 1      & 5     \\
+Average\_Rating\_Others & 4,562 & 4.88    & 0.205  & 1      & 5     \\
+Review\_Count           & 4,562 & 5.384   & 6.836  & 0      & 52    \\
+Experience              & 4,562 & 1.758   & 0.929  & 0      & 3.714 \\
+Price\_Difference       & 4,562 & -0.0333 & 0.392  & -2.171 & 3.139 \\
+Market\_LogRevenue      & 4,562 & 12.24   & 7.9    & 0      & 22.3  \\ \bottomrule
+\end{tabular}%
+\caption{Summary Statistics - Installer Level Analysis}
+\label{sumstats_ind}
+{\footnotesize \textit{Note: All entropy variables are demeaned.}}
+\end{table} 

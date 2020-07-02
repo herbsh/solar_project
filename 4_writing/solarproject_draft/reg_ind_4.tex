@@ -1,0 +1,39 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[]
+\centering
+\begin{tabular}{@{}lllll@{}}
+\toprule
+ & (1) & (2) & (3) & (4) \\ \midrule
+ & F.Activity & F.Activity & F.Activity & F.Activity \\
+Text-based Entropy Others & 25.40* & 25.40* & -10.30 & -10.30 \\
+ & (0.001) & (0.001) & (0.316) & (0.311) \\
+Text-based Entropy Others$^2$ & -84.20* & -84.20* & 24.66 & 24.66 \\
+ & (0.000) & (0.001) & (0.407) & (0.447) \\
+Text-based Entropy(self) &  &  & 11.27 & 11.27 \\
+ &  &  & (0.263) & (0.179) \\
+Text-based Entropy(self) $^2$ &  &  & -28.49 & -28.49 \\
+ &  &  & (0.235) & (0.157) \\
+Avg Sentiment Score & -0.797* & -0.797 & -1.100+ & -1.100* \\
+ & (0.031) & (0.101) & (0.058) & (0.045) \\
+Avg Sentiment Score$^2$ & 0.263 & 0.263 & 1.552* & 1.552* \\
+ & (0.621) & (0.638) & (0.012) & (0.015) \\
+Avg Sent(Others) & -0.147 & -0.147 & -0.204 & -0.204 \\
+ & (0.599) & (0.495) & (0.482) & (0.476) \\
+Reviews Count & 0.0482* & 0.0482* & 0.0492* & 0.0492* \\
+ & (0.001) & (0.000) & (0.000) & (0.000) \\
+Experience & 0.267* & 0.267* & 0.0924 & 0.0924 \\
+ & (0.018) & (0.002) & (0.463) & (0.320) \\
+Price Diff & -0.0641 & -0.0641 & 0.0343 & 0.0343 \\
+ & (0.350) & (0.481) & (0.861) & (0.837) \\
+Market Revenue & -0.0156* & -0.0156* & -0.0170+ & -0.0170* \\
+ & (0.016) & (0.031) & (0.072) & (0.021) \\
+Constant & 0.530 & 0.530 & 2.541 & 2.541* \\
+ & (0.403) & (0.450) & (0.113) & (0.034) \\
+Observations & 5722 & 5722 & 3179 & 3179 \\
+p-values in parentheses &  &  &  &  \\
+="+ p\textless{}0.10 & * p\textless{}0.05" &  &  &  \\ \bottomrule
+\end{tabular}
+\caption{Use Sentiment score and Text-based Entropy}
+\label{reg_ind_4}
+\end{table}

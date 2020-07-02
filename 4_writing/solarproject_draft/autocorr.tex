@@ -1,0 +1,21 @@
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+\begin{table}[H]
+\centering
+\begin{tabular}{@{}ccc@{}}
+\toprule
+\multicolumn{1}{l}{\textbf{Installer Level Dynamic Panel}} & \multicolumn{1}{l}{} & \multicolumn{1}{l}{} \\ \midrule
+Order                                   & z                    & $p-value$  \\
+$H_{0}$: No correlation between $\Delta_{i,t}$ and $\Delta_{i,t-1}$ & -9.8283  & 0.00 \\
+$H_{0}$: No correlation between $\Delta_{i,t}$ and $\Delta_{i,t-2}$  & -0.66053 & 0.5089 \\
+ Sargan Test for overidentifying restriction & $\chi^2(1525)$  =  238.2181& 1.000 \\ \midrule
+\textbf{Market Level Dynamic Panel}          &    &      \\ \midrule
+Order                           & z      & $p-value$  \\
+$H_{0}$: No correlation between $\Delta_{i,t}$ and $\Delta_{i,t-1}$  & -2.7882 & 0.01 \\
+$H_{0}$: No correlation between $\Delta_{i,t}$ and $\Delta_{i,t-2}$  & 0.04295  & 0.9657 \\
+ Sargan Test for overidentifying restriction & $\chi^2(544)$ =  22.77427 & 1.000 \\ \bottomrule
+\end{tabular}
+\caption{Dynamic Panel Specification Checks
+}
+\label{autocorrelation_test}
+\end{table} 
