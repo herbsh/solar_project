@@ -111,7 +111,37 @@ Descriptions of Raw Data sets
 - input: raw reviews texts '../0_data/Lock_ES_RawData/installer_review_data_20180410.csv'
 - output: '../3_output/ALL_BERT_distances_pairwise_dec30.csv' 
 
+## Make Text Dispersion 
+- notebook: step10_make_text_dispersion.ipynb
+- input:   
+    - market levels from step 3  '../2_pipeline/es_marketlevel90_100_2two_step.csv'
+    - raw reviews data:'../0_data/Lock_ES_RawData/installer_review_data_20180410.csv'
+    - distances pairs from step 9: '../3_output/ALL_BERT_distances_pairwise_dec30.csv')
+- output: 
+    - intermediary output: an 'inventory' of reviews  present from the perspectives each installer-month   : 2_pipeline/reviewsid_mkt_month_individual_inventory_jan17_2020.csv  
+    - fina Output: 
+        - text dispersion on market level: ../2_pipeline/inventory_reduced_mkt_sumstats_jan18_2020.csv') 
+        - text dispersion on installer level, measuring own dispersion : ../2_pipeline/inventory_reduced_self_sumstats_jan18_2020.csv 
+        - text dispersion on installer level, measuring other dispersion : ../2_pipeline/inventory_reduced_others_sumstats_jan18_2020
+        - the merged text dispersion data '..2_pipeline/BERTtext_ent_90_100_2steps.csv' 
 
-```python
+## Make installer level data for regression 
+- notebook: step11_make_regressiondata.ipynb 
+- inputs: 
+    - Input: /final_step_analysis_ind_jan17.dta from step 7
+    - Text Dispersion variables"../2_pipeline/BERTtext_ent_90_100_2twosteps.dta" ,clear
+- output:  
+    - intermediary data:   text dispersion data "../2_pipeline/BERTtext_ent_90_100_2twosteps.dta"
+    - final Output: regression ready panel data : "../3_output/regression_analysis_ind_with_ent_sent_june2020.dta" 
 
-```
+## Installer Level Analysis 
+- notebook: step12_installer_analysis,ipynv
+- input:  from step 11  "../3_output/regression_analysis_ind_with_ent_sent_june2020.dta" 
+
+## Make Data for Market Level analysis
+- notebook: step13_make_regressiondata.ipynb 
+- input: 
+    - Text dispersion data: BERTtext_ent_90_100_2twosteps.dta 
+- output: 
+    - intermediary data: Market level text dispersion:   "../2_pipeline/BERTtext_ent_90_100_2twosteps_mktlevel.dta"
+    - final data: market level data ready for regression :  "../3_output/regression_analysis_mkt_with_ent_sent_june9.dta"
