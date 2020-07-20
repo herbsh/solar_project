@@ -5,4 +5,4 @@
 **/0_data/TTS_v2018.dta
 
 **/3_output/ALL_BERT_distances_pairwise_dec30.csv
-**/0_data/Lock_ES_RawData/*
+**/0_data/Lock_ES_RawData/*.csv
