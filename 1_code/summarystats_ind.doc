@@ -1,0 +1,19 @@
+{\rtf1\fs24
+\trowd\trgaph75\trleft-75\intbl\trqc\clbrdrt\brdrs\cellx3168\clbrdrt\brdrs\cellx4032\clbrdrt\brdrs\cellx5184\clbrdrt\brdrs\cellx6048\clbrdrt\brdrs\cellx7056\clbrdrt\brdrs\cellx7920
+\ql \cell\qc (1)\cell\qc (2)\cell\qc (3)\cell\qc (4)\cell\qc (5)\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3168\cellx4032\cellx5184\cellx6048\cellx7056\cellx7920
+\trowd\trgaph75\trleft-75\trqc\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx5184\clbrdrb\brdrs\cellx6048\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx7920
+\ql VARIABLES\cell\qc N\cell\qc mean\cell\qc sd\cell\qc min\cell\qc max\cell\row
+\trowd\trgaph75\trleft-75\trqc\cellx3168\cellx4032\cellx5184\cellx6048\cellx7056\cellx7920
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+\ql Review_Count\cell\qc 4,605\cell\qc 5.230\cell\qc 6.515\cell\qc 0\cell\qc 51\cell\row
+\ql Average_Rating_Others\cell\qc 4,605\cell\qc 4.884\cell\qc 0.193\cell\qc 1\cell\qc 5\cell\row
+\ql Rating_Entropy_Others\cell\qc 4,605\cell\qc 0.239\cell\qc 0.187\cell\qc 0\cell\qc 1.071\cell\row
+\ql Rating_Entropy_Self\cell\qc 4,605\cell\qc 0.102\cell\qc 0.223\cell\qc 0\cell\qc 1.210\cell\row
+\ql Experience\cell\qc 4,605\cell\qc 1.609\cell\qc 1.016\cell\qc 0\cell\qc 3.784\cell\row
+\ql Price_Difference\cell\qc 4,605\cell\qc -0.0310\cell\qc 0.382\cell\qc -2.171\cell\qc 3.212\cell\row
+\ql Average_Rating_Self\cell\qc 4,605\cell\qc 4.525\cell\qc 1.327\cell\qc 0\cell\qc 5\cell\row
+\ql Market_LogRevenue\cell\qc 4,605\cell\qc 11.60\cell\qc 8.157\cell\qc 0\cell\qc 22.30\cell\row
+\trowd\trgaph75\trleft-75\trqc\trbrdrb\brdrs\clbrdrb\brdrs\cellx3168\clbrdrb\brdrs\cellx4032\clbrdrb\brdrs\cellx5184\clbrdrb\brdrs\cellx6048\clbrdrb\brdrs\cellx7056\clbrdrb\brdrs\cellx7920
+\ql \cell\qc \cell\qc \cell\qc \cell\qc \cell\qc \cell\row
+}

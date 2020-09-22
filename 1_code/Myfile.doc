@@ -1,0 +1,119 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{\b\qc\line Pairwise correlations }{\par}
+{\trowd\trgaph108\trleft-108
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx2200
+\fs20 \pard\intbl  {Variables}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3040
+\fs20 \pard\intbl {(1)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3880
+\fs20 \pard\intbl {(2)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx4720
+\fs20 \pard\intbl {(3)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx5560
+\fs20 \pard\intbl {(4)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx6400
+\fs20 \pard\intbl {(5)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx7240
+\fs20 \pard\intbl {(6)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx8080
+\fs20 \pard\intbl {(7)}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (1) Text-based Entropy}\cell
+\cellx3040
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (2) Rating_Entropy_Mkt}\cell
+\cellx3040
+\fs20 \pard\intbl {0.044}\cell
+\cellx3880
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (3) Average_Sentimen~t}\cell
+\cellx3040
+\fs20 \pard\intbl {-0.389*}\cell
+\cellx3880
+\fs20 \pard\intbl {0.159*}\cell
+\cellx4720
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (4) Average_Rating_Mkt}\cell
+\cellx3040
+\fs20 \pard\intbl {-0.095}\cell
+\cellx3880
+\fs20 \pard\intbl {-0.608*}\cell
+\cellx4720
+\fs20 \pard\intbl {0.154*}\cell
+\cellx5560
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (5) Experience}\cell
+\cellx3040
+\fs20 \pard\intbl {-0.111*}\cell
+\cellx3880
+\fs20 \pard\intbl {0.223*}\cell
+\cellx4720
+\fs20 \pard\intbl {0.106*}\cell
+\cellx5560
+\fs20 \pard\intbl {-0.107*}\cell
+\cellx6400
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (6) Price_Difference}\cell
+\cellx3040
+\fs20 \pard\intbl {0.105*}\cell
+\cellx3880
+\fs20 \pard\intbl {-0.054}\cell
+\cellx4720
+\fs20 \pard\intbl {-0.010}\cell
+\cellx5560
+\fs20 \pard\intbl {-0.017}\cell
+\cellx6400
+\fs20 \pard\intbl {0.008}\cell
+\cellx7240
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx2200
+\fs20 \pard\intbl  { (7) Market_LogRevenue}\cell
+\cellx3040
+\fs20 \pard\intbl {-0.077}\cell
+\cellx3880
+\fs20 \pard\intbl {0.171*}\cell
+\cellx4720
+\fs20 \pard\intbl {0.208*}\cell
+\cellx5560
+\fs20 \pard\intbl {-0.054}\cell
+\cellx6400
+\fs20 \pard\intbl {0.523*}\cell
+\cellx7240
+\fs20 \pard\intbl {-0.067}\cell
+\cellx8080
+\fs20 \pard\intbl {1.000}\cell
+\row}
+{\trowd\trgaph108\trleft-108
+\clbrdrb\brdrw20\brdrs\cellx8080 \cell
+\row}
+{\trowd\trgaph108\trleft-108
+\cellx8080
+\pard\intbl\ql {* shows significance at the 0.01 level }\cell
+\row}
+
+
+\writepositionforappend
+}}

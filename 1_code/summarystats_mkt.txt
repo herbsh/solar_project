@@ -1,0 +1,10 @@
+		(1)	(2)	(3)	(4)	(5)
+VARIABLES	LABELS	N	mean	sd	min	max
+						
+ent_mkt	Rating_Entropy_Mkt	642	0.191	0.236	0	1.055
+log_zip_rev	Market_LogRevenue	642	7.887	8.102	0	22.30
+avgmean_mkt	Average_Rating_Mkt	642	4.870	0.245	3	5
+temp_own_price_diff_other	Price_Difference	642	-0.0106	0.146	-0.504	1.312
+log_sum_quotes	Market_Transaction	642	0.976	1.070	0	4.522
+log_experience	log_experience	642	1.426	1.110	0	3.332
+						

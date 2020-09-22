@@ -1,0 +1,13 @@
+command pwcor is unrecognized
+r(199);
+r(199);
+
+. `17adad38ec0abd6c8fb3776c3daca1b5'
+. include C:/.stata_kernel_cache/include.do
+
+. tempname __user_rc
+
+. local `__user_rc' = _rc
+
+. . `cc64df03024327541235dabb93f09e00'
+. _StataKernelLog off

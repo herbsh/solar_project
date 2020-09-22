@@ -1,0 +1,12 @@
+		(1)	(2)	(3)	(4)	(5)
+VARIABLES	LABELS	N	mean	sd	min	max
+						
+reviews_ct	Review_Count	3,479	6.613	6.922	0	51
+log_experience	Experience	3,479	1.689	0.977	0	3.784
+temp_own_price_diff_other	Price_Difference	3,479	-0.0448	0.330	-2.171	1.857
+log_zip_rev	Market_LogRevenue	3,479	11.80	8.061	0	22.30
+avg_sent_score_demean	Average_Sentiment_Self	3,479	0.244	0.184	-1.239	0.546
+avg_sent_score_others_demean	Average_Sentiment_Others	3,479	0.111	0.120	-1.161	0.396
+text_d_self_p50_demean	Text-based_Entropy_Self	3,479	0.0657	0.0478	-0.0636	0.318
+text_d_others_p50_demean	Text-based_Entropy_Others	3,479	-0.000924	0.0197	-0.0581	0.241
+						
