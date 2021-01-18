@@ -3,115 +3,133 @@
 \deflang1033\plain\fs20
 {\footer\pard\qc\plain\f0\fs20\chpgn\par}
 {
-{\b\qc\line Pairwise correlations }{\par}
+{\fs20\b\qc\line Matrix of correlations }{\par}
 {\trowd\trgaph108\trleft-108
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx2200
-\fs20 \pard\intbl  {Variables}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3040
-\fs20 \pard\intbl {(1)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3880
-\fs20 \pard\intbl {(2)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx4720
-\fs20 \pard\intbl {(3)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx5560
-\fs20 \pard\intbl {(4)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx6400
-\fs20 \pard\intbl {(5)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx7240
-\fs20 \pard\intbl {(6)}\cell
-\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx8080
-\fs20 \pard\intbl {(7)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx2813
+\fs20\pard\intbl\ql { Variables}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx3799
+\fs20\pard\intbl\qr { (1)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx4785
+\fs20\pard\intbl\qr { (2)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx5771
+\fs20\pard\intbl\qr { (3)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx6757
+\fs20\pard\intbl\qr { (4)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx7742
+\fs20\pard\intbl\qr { (5)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx8728
+\fs20\pard\intbl\qr { (6)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx9714
+\fs20\pard\intbl\qr { (7)}\cell
+\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs  \cellx10700
+\fs20\pard\intbl\qr { (8)}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (1) Text-based Entropy}\cell
-\cellx3040
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (1) ent_self}\cell
+\cellx3799
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (2) Rating_Entropy_Mkt}\cell
-\cellx3040
-\fs20 \pard\intbl {0.044}\cell
-\cellx3880
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (2) ent_others}\cell
+\cellx3799
+\fs20\pard\intbl\qr {-0.075}\cell
+\cellx4785
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (3) Average_Sentimen~t}\cell
-\cellx3040
-\fs20 \pard\intbl {-0.389*}\cell
-\cellx3880
-\fs20 \pard\intbl {0.159*}\cell
-\cellx4720
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (3) avg_v2}\cell
+\cellx3799
+\fs20\pard\intbl\qr {-0.084}\cell
+\cellx4785
+\fs20\pard\intbl\qr {0.063}\cell
+\cellx5771
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (4) Average_Rating_Mkt}\cell
-\cellx3040
-\fs20 \pard\intbl {-0.095}\cell
-\cellx3880
-\fs20 \pard\intbl {-0.608*}\cell
-\cellx4720
-\fs20 \pard\intbl {0.154*}\cell
-\cellx5560
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (4) avgmean_others}\cell
+\cellx3799
+\fs20\pard\intbl\qr {0.023}\cell
+\cellx4785
+\fs20\pard\intbl\qr {-0.511}\cell
+\cellx5771
+\fs20\pard\intbl\qr {-0.017}\cell
+\cellx6757
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (5) Experience}\cell
-\cellx3040
-\fs20 \pard\intbl {-0.111*}\cell
-\cellx3880
-\fs20 \pard\intbl {0.223*}\cell
-\cellx4720
-\fs20 \pard\intbl {0.106*}\cell
-\cellx5560
-\fs20 \pard\intbl {-0.107*}\cell
-\cellx6400
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (5) reviews_ct}\cell
+\cellx3799
+\fs20\pard\intbl\qr {0.257}\cell
+\cellx4785
+\fs20\pard\intbl\qr {0.055}\cell
+\cellx5771
+\fs20\pard\intbl\qr {0.210}\cell
+\cellx6757
+\fs20\pard\intbl\qr {-0.040}\cell
+\cellx7742
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (6) Price_Difference}\cell
-\cellx3040
-\fs20 \pard\intbl {0.105*}\cell
-\cellx3880
-\fs20 \pard\intbl {-0.054}\cell
-\cellx4720
-\fs20 \pard\intbl {-0.010}\cell
-\cellx5560
-\fs20 \pard\intbl {-0.017}\cell
-\cellx6400
-\fs20 \pard\intbl {0.008}\cell
-\cellx7240
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (6) log_experience}\cell
+\cellx3799
+\fs20\pard\intbl\qr {-0.017}\cell
+\cellx4785
+\fs20\pard\intbl\qr {0.051}\cell
+\cellx5771
+\fs20\pard\intbl\qr {0.021}\cell
+\cellx6757
+\fs20\pard\intbl\qr {-0.094}\cell
+\cellx7742
+\fs20\pard\intbl\qr {0.123}\cell
+\cellx8728
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx2200
-\fs20 \pard\intbl  { (7) Market_LogRevenue}\cell
-\cellx3040
-\fs20 \pard\intbl {-0.077}\cell
-\cellx3880
-\fs20 \pard\intbl {0.171*}\cell
-\cellx4720
-\fs20 \pard\intbl {0.208*}\cell
-\cellx5560
-\fs20 \pard\intbl {-0.054}\cell
-\cellx6400
-\fs20 \pard\intbl {0.523*}\cell
-\cellx7240
-\fs20 \pard\intbl {-0.067}\cell
-\cellx8080
-\fs20 \pard\intbl {1.000}\cell
+\cellx2813
+\fs20\pard\intbl\ql { (7) temp_own_price~r}\cell
+\cellx3799
+\fs20\pard\intbl\qr {-0.011}\cell
+\cellx4785
+\fs20\pard\intbl\qr {-0.037}\cell
+\cellx5771
+\fs20\pard\intbl\qr {0.005}\cell
+\cellx6757
+\fs20\pard\intbl\qr {0.018}\cell
+\cellx7742
+\fs20\pard\intbl\qr {-0.030}\cell
+\cellx8728
+\fs20\pard\intbl\qr {-0.035}\cell
+\cellx9714
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\clbrdrb\brdrw20\brdrs\cellx8080 \cell
+\cellx2813
+\fs20\pard\intbl\ql { (8) log_zip_rev}\cell
+\cellx3799
+\fs20\pard\intbl\qr {-0.042}\cell
+\cellx4785
+\fs20\pard\intbl\qr {-0.096}\cell
+\cellx5771
+\fs20\pard\intbl\qr {-0.023}\cell
+\cellx6757
+\fs20\pard\intbl\qr {0.017}\cell
+\cellx7742
+\fs20\pard\intbl\qr {-0.043}\cell
+\cellx8728
+\fs20\pard\intbl\qr {0.588}\cell
+\cellx9714
+\fs20\pard\intbl\qr {-0.060}\cell
+\cellx10700
+\fs20\pard\intbl\qr {1.000}\cell
 \row}
 {\trowd\trgaph108\trleft-108
-\cellx8080
-\pard\intbl\ql {* shows significance at the 0.01 level }\cell
+\clbrdrb\brdrw15\brdrs\cellx10700\cell
 \row}
 
 

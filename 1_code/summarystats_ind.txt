@@ -1,0 +1,12 @@
+		(1)	(2)	(3)	(4)	(5)
+VARIABLES	LABELS	N	mean	sd	min	max
+						
+reviews_ct	Review_Count	4,605	5.230	6.515	0	51
+avgmean_others	Average_Rating_Others	4,605	4.884	0.193	1	5
+ent_others	Rating_Entropy_Others	4,605	0.239	0.187	0	1.071
+ent_self	Rating_Entropy_Self	4,605	0.102	0.223	0	1.210
+log_experience	Experience	4,605	1.609	1.016	0	3.784
+temp_own_price_diff_other	Price_Difference	4,605	-0.0310	0.382	-2.171	3.212
+avg_v2	Average_Rating_Self	4,605	4.525	1.327	0	5
+log_zip_rev	Market_LogRevenue	4,605	11.60	8.157	0	22.30
+						
