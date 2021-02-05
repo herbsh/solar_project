@@ -1,0 +1,22 @@
+,(1),(2),(3)
+,Market Transaction,Market Transaction,Market Transaction
+Rating_Entropy_Mkt,2.173**,1.720**,2.365**
+,(0.001),(0.001),(0.004)
+Rating_Entropy_Mkt # Rating_Entropy_Mkt,-2.487***,-1.928**,-2.498*
+,(0.001),(0.004),(0.013)
+Average_Rating_Mkt,0.0923,-0.0596,-0.176
+,(0.640),(0.730),(0.524)
+Market_LogRevenue,0.0651,0.0372,0.0929
+,(0.178),(0.408),(0.123)
+Experience,0.00331,-0.00602,0.00345
+,(0.780),(0.559),(0.829)
+Price_Difference,0.357,0.278,0.577
+,(0.389),(0.375),(0.279)
+Constant,0.793,2.196,-5.369
+,(0.435),(0.239),(0.484)
+Fixed Effects,Yes,Yes,Yes
+State Dummies,Yes,Yes,Yes
+Observations,390,365,173
+Adjusted R2,0.735,0.708,0.787
+AIC,697.1,642.9,272.7
+BIC,728.9,720.9,335.8
